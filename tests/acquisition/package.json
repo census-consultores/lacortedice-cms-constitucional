@@ -1,0 +1,11 @@
+{
+  "name": "lcdt-acquisition-tests",
+  "private": true,
+  "scripts": {
+    "test": "node --test bridge.test.cjs"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "typescript": "5.8.3"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "decisiones_finales_apelacion",
+  "info": {
+    "singularName": "decision-final-apelacion",
+    "pluralName": "decisiones-finales-apelacion",
+    "displayName": "Decisión final (apelación)",
+    "description": "Confirma / Revoca / Reforma / Nulidad"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "sigla": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

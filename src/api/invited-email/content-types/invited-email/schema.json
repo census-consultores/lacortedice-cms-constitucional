@@ -1,0 +1,122 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invited_emails",
+  "info": {
+    "singularName": "invited-email",
+    "pluralName": "invited-emails",
+    "displayName": "Invited Email",
+    "description": "Whitelist de correos universitarios autorizados para auto-registro. Una fila por correo invitado; status sigue el funnel hasta verificación."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "invited",
+        "form_started",
+        "pending_verification",
+        "verified",
+        "expired",
+        "revoked"
+      ],
+      "default": "invited",
+      "required": true
+    },
+    "university": {
+      "type": "string"
+    },
+    "program": {
+      "type": "string"
+    },
+    "registrationTokenHash": {
+      "type": "string",
+      "private": true
+    },
+    "tokenExpiresAt": {
+      "type": "datetime",
+      "private": true
+    },
+    "invitedAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "formStartedAt": {
+      "type": "datetime"
+    },
+    "formCompletedAt": {
+      "type": "datetime"
+    },
+    "verifiedAt": {
+      "type": "datetime"
+    },
+    "lastEmailSentAt": {
+      "type": "datetime"
+    },
+    "resendsCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "invitedBy": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "batchId": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "welcomeEmailStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "sent",
+        "failed"
+      ],
+      "default": "pending"
+    },
+    "welcomeEmailSentAt": {
+      "type": "datetime"
+    },
+    "welcomeEmailError": {
+      "type": "text"
+    },
+    "welcomeEmailAttempts": {
+      "type": "integer",
+      "default": 0
+    },
+    "magicLinkStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "sent",
+        "failed"
+      ],
+      "default": "pending"
+    },
+    "magicLinkSentAt": {
+      "type": "datetime"
+    },
+    "magicLinkError": {
+      "type": "text"
+    },
+    "magicLinkAttempts": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

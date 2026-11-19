@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tu código de verificación — La Corte Dice Tributaria</title>
+    <style>
+      body { margin:0; padding:0; background:#f1ece0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; color:#1a1a1a; }
+      .wrap { width:100%; background:#f1ece0; padding:32px 16px; }
+      .card { max-width:600px; margin:0 auto; background:#ffffff; border-radius:4px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,.06); }
+      .header { background:#0A0A0A; padding:40px 40px 32px 40px; text-align:center; border-bottom:3px solid #B49A3A; }
+      .brand-corp { color:#B49A3A; font-size:10px; letter-spacing:3.5px; font-weight:700; text-transform:uppercase; display:block; margin-bottom:6px; }
+      .brand-name { color:#ffffff; font-family:Georgia,"Times New Roman",serif; font-size:24px; font-weight:700; letter-spacing:-.3px; display:block; }
+      .header-sub { color:#d9cfae; font-size:13px; margin-top:22px; font-style:italic; font-family:Georgia,serif; }
+      .body { padding:40px; }
+      .hello { font-size:16px; color:#0A0A0A; margin:0 0 8px 0; }
+      .intro { font-size:15px; line-height:1.65; color:#333; margin:0 0 18px 0; }
+      .code-box { background:#faf7ee; border:1px solid #e8dcb8; border-radius:4px; text-align:center; padding:26px 20px; margin:26px 0; }
+      .code-label { font-size:11px; letter-spacing:2.5px; color:#8a7530; text-transform:uppercase; font-weight:700; display:block; margin-bottom:10px; }
+      .code { font-family:Georgia,"Times New Roman",serif; font-size:40px; font-weight:700; letter-spacing:10px; color:#0A0A0A; display:block; }
+      .small { font-size:12px; color:#888; margin-top:12px; line-height:1.6; }
+      .footer { background:#0A0A0A; padding:28px 40px; text-align:center; color:#888; font-size:12px; line-height:1.7; }
+      .footer-brand { color:#B49A3A; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; font-family:Georgia,serif; display:block; margin-bottom:10px; }
+      .footer a { color:#B49A3A; text-decoration:none; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <div class="header">
+          <span class="brand-corp">#LaCorteDice</span>
+          <span class="brand-name">La Corte Dice Tributaria</span>
+          <div class="header-sub">Repositorio jurisprudencial del contencioso tributario del Ecuador</div>
+        </div>
+        <div class="body">
+          <p class="hello">Hola,</p>
+          <p class="intro">
+            Estás creando tu cuenta en <strong>La Corte Dice Tributaria</strong> con el
+            correo <strong>{{email}}</strong>. Ingresa este código en el formulario de
+            registro para verificar que el correo es tuyo:
+          </p>
+          <div class="code-box">
+            <span class="code-label">Código de verificación</span>
+            <span class="code">{{codigo}}</span>
+          </div>
+          <p class="intro">El código vence en <strong>10 minutos</strong>.</p>
+          <p class="small">
+            Si tú no estás creando esta cuenta, ignora este correo — sin el código
+            nadie puede registrarse con tu dirección.
+          </p>
+        </div>
+        <div class="footer">
+          <span class="footer-brand">La Corte Dice Tributaria</span>
+          <a href="https://app.lacortedicetributaria.com">app.lacortedicetributaria.com</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

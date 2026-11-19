@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notificaciones",
+  "info": {
+    "singularName": "notificacion",
+    "pluralName": "notificaciones",
+    "displayName": "Notificación",
+    "description": "Bandeja de notificaciones por usuario: cada push emitido deja su rastro aquí para que la app muestre qué hay de nuevo y a dónde ir. leidaEn null = no leída."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "cuerpo": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    },
+    "leidaEn": {
+      "type": "datetime"
+    }
+  }
+}

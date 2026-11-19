@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorias",
+  "info": {
+    "singularName": "categoria",
+    "pluralName": "categorias",
+    "displayName": "Categoría",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "entidad": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::entidad.entidad",
+      "inversedBy": "categorias"
+    },
+    "categoria_padre": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria.categoria",
+      "inversedBy": "categoria_hijos"
+    },
+    "categoria_hijos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::categoria.categoria",
+      "mappedBy": "categoria_padre"
+    },
+    "causas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::causa.causa",
+      "mappedBy": "categorias"
+    }
+  }
+}

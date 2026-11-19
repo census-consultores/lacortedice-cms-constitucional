@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "favoritos",
+  "info": {
+    "singularName": "favorito",
+    "pluralName": "favoritos",
+    "displayName": "Favorito",
+    "description": "Causas marcadas como favoritas por usuarios. Borrado físico al des-favoritear; createdAt = última vez que se marcó."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "causaDocumentId": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

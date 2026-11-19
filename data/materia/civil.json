@@ -1,0 +1,663 @@
+{
+  "materia": "Civil y Mercantil",
+  "palabra_catalogo": "CIVIL",
+  "decisiones_finales": [
+    {
+      "nombre": "Con lugar",
+      "sigla": "CL"
+    },
+    {
+      "nombre": "Sin lugar",
+      "sigla": "SL"
+    },
+    {
+      "nombre": "Parcialmente con lugar",
+      "sigla": "PCL"
+    }
+  ],
+  "decisiones_finales_casacion": [
+    {
+      "nombre": "Casa la sentencia.",
+      "sigla": "C"
+    },
+    {
+      "nombre": "No casa la sentencia.",
+      "sigla": "NC"
+    },
+    {
+      "nombre": "Casa parcialmente la sentencia.",
+      "sigla": "CP"
+    },
+    {
+      "nombre": "Inadmite el recurso de casación.",
+      "sigla": "IN"
+    },
+    {
+      "nombre": "Improcedente el recurso de casación.",
+      "sigla": "IM"
+    },
+    {
+      "nombre": "Desistimiento del recurso de casación.",
+      "sigla": "DE"
+    },
+    {
+      "nombre": "Abandono del recurso de casación.",
+      "sigla": "AB"
+    }
+  ],
+  "decisiones_finales_apelacion": [
+    {
+      "nombre": "Confirma la sentencia.",
+      "sigla": "CONF"
+    },
+    {
+      "nombre": "Revoca la sentencia.",
+      "sigla": "REV"
+    },
+    {
+      "nombre": "Reforma la sentencia.",
+      "sigla": "REF"
+    },
+    {
+      "nombre": "Declara la nulidad.",
+      "sigla": "NUL"
+    }
+  ],
+  "tipos_de_accion": [
+    "Procedimiento ordinario",
+    "Procedimiento sumario",
+    "Procedimiento ejecutivo",
+    "Procedimiento monitorio",
+    "Procedimiento voluntario",
+    "Procedimiento de ejecución",
+    "Procedimiento concursal"
+  ],
+  "estados_del_juicio": [
+    "En Unidad Judicial",
+    "En Corte Provincial",
+    "En Corte Nacional",
+    "Concluido en Corte Nacional",
+    "Archivado",
+    "Sin resultados",
+    "No civil"
+  ],
+  "categorias": [
+    {
+      "nombre": "Principios y reglas generales del derecho civil",
+      "subcategorias": [
+        "Autonomía de la voluntad",
+        "Buena fe",
+        "Fuerza obligatoria del contrato (pacta sunt servanda)",
+        "Abuso del derecho",
+        "Enriquecimiento sin causa",
+        "Irretroactividad de la ley",
+        "Seguridad jurídica",
+        "Tutela judicial efectiva y debido proceso civil",
+        "Interpretación de la ley civil"
+      ]
+    },
+    {
+      "nombre": "Obligaciones",
+      "subcategorias": [
+        "Fuentes de las obligaciones",
+        "Obligaciones de dar, hacer y no hacer",
+        "Obligaciones solidarias e indivisibles",
+        "Obligaciones a plazo y condicionales",
+        "Pago y solución de la obligación",
+        "Pago por consignación",
+        "Mora del deudor y del acreedor",
+        "Intereses convencionales, legales y de mora",
+        "Cláusula penal",
+        "Novación",
+        "Compensación",
+        "Remisión y confusión",
+        "Imposibilidad de cumplimiento y pérdida de la cosa debida",
+        "Cesión de derechos y de créditos",
+        "Subrogación",
+        "Cláusula de aceleración y vencimiento anticipado"
+      ]
+    },
+    {
+      "nombre": "Contratos en general",
+      "subcategorias": [
+        "Formación y perfeccionamiento del contrato",
+        "Capacidad y consentimiento",
+        "Objeto y causa",
+        "Formalidades y solemnidades",
+        "Interpretación del contrato",
+        "Efectos del contrato y efecto relativo",
+        "Cumplimiento forzoso de la obligación",
+        "Resolución del contrato por incumplimiento",
+        "Excepción de contrato no cumplido",
+        "Terminación unilateral y terminación por mutuo acuerdo",
+        "Arras y garantías contractuales",
+        "Indemnización de daños y perjuicios contractuales",
+        "Contratos de adhesión y cláusulas abusivas",
+        "Contratos innominados y atípicos"
+      ]
+    },
+    {
+      "nombre": "Nulidad, rescisión y simulación",
+      "subcategorias": [
+        "Nulidad absoluta",
+        "Nulidad relativa",
+        "Inexistencia del acto",
+        "Error como vicio del consentimiento",
+        "Fuerza como vicio del consentimiento",
+        "Dolo como vicio del consentimiento",
+        "Lesión enorme",
+        "Simulación absoluta y relativa",
+        "Acción pauliana o revocatoria",
+        "Efectos de la nulidad y restituciones mutuas",
+        "Prescripción de la acción de nulidad",
+        "Nulidad de escritura pública e instrumentos públicos"
+      ]
+    },
+    {
+      "nombre": "Compraventa y promesa de compraventa",
+      "subcategorias": [
+        "Compraventa de bienes inmuebles",
+        "Compraventa de bienes muebles y vehículos",
+        "Promesa de compraventa",
+        "Precio y pago del precio",
+        "Entrega y tradición de la cosa vendida",
+        "Saneamiento por evicción",
+        "Vicios redhibitorios",
+        "Pacto de retroventa y reserva de dominio",
+        "Lesión enorme en la compraventa de inmuebles",
+        "Resolución de la compraventa por falta de pago del precio",
+        "Permuta",
+        "Venta de cosa ajena",
+        "Compraventa de derechos y acciones"
+      ]
+    },
+    {
+      "nombre": "Arrendamiento e inquilinato",
+      "subcategorias": [
+        "Arrendamiento civil de inmuebles",
+        "Arrendamiento de locales comerciales",
+        "Contrato de inquilinato de vivienda",
+        "Pago de cánones de arrendamiento",
+        "Desahucio y terminación del contrato de inquilinato",
+        "Causales de terminación del arrendamiento",
+        "Devolución y entrega del inmueble arrendado",
+        "Mejoras y reparaciones",
+        "Garantías y depósitos del inquilinato",
+        "Arrendamiento de bienes muebles",
+        "Arrendamiento mercantil (leasing)",
+        "Subarrendamiento y cesión del arrendamiento"
+      ]
+    },
+    {
+      "nombre": "Mutuo, préstamo y garantías",
+      "subcategorias": [
+        "Mutuo o préstamo de consumo",
+        "Intereses y usura",
+        "Fianza",
+        "Prenda ordinaria e industrial",
+        "Hipoteca",
+        "Ejecución de garantías reales",
+        "Cancelación y levantamiento de hipoteca o prenda",
+        "Anticresis",
+        "Garantes y avalistas",
+        "Crédito con garantía de vehículos"
+      ]
+    },
+    {
+      "nombre": "Mandato, comodato, depósito y otros contratos",
+      "subcategorias": [
+        "Mandato y poder",
+        "Rendición de cuentas",
+        "Comodato o préstamo de uso",
+        "Depósito",
+        "Contrato de obra y construcción",
+        "Prestación de servicios civiles y honorarios profesionales",
+        "Sociedad civil",
+        "Transacción extrajudicial (contrato: validez, nulidad, alcance)",
+        "Donación",
+        "Contratos de corretaje e intermediación",
+        "Contratos de hospedaje, educación y servicios"
+      ]
+    },
+    {
+      "nombre": "Responsabilidad civil extracontractual",
+      "subcategorias": [
+        "Delito y cuasidelito civil",
+        "Culpa y negligencia",
+        "Daño y su prueba",
+        "Nexo causal",
+        "Responsabilidad por el hecho ajeno",
+        "Responsabilidad por el hecho de las cosas y de los animales",
+        "Responsabilidad por accidentes de tránsito",
+        "Responsabilidad profesional y médica",
+        "Responsabilidad objetiva y actividades riesgosas",
+        "Daño emergente",
+        "Lucro cesante",
+        "Cuantificación de la indemnización",
+        "Eximentes: caso fortuito, fuerza mayor y culpa de la víctima",
+        "Prescripción de la acción de responsabilidad extracontractual"
+      ]
+    },
+    {
+      "nombre": "Daño moral",
+      "subcategorias": [
+        "Procedencia del daño moral",
+        "Legitimación activa y pasiva en el daño moral",
+        "Daño moral por imputaciones injuriosas o denuncias infundadas",
+        "Daño moral por incumplimiento contractual",
+        "Daño moral por muerte o lesiones",
+        "Daño moral de personas jurídicas",
+        "Prueba del daño moral",
+        "Cuantificación de la reparación por daño moral"
+      ]
+    },
+    {
+      "nombre": "Propiedad y dominio",
+      "subcategorias": [
+        "Modos de adquirir el dominio",
+        "Tradición e inscripción en el Registro de la Propiedad",
+        "Acción reivindicatoria o de dominio",
+        "Requisitos de la reivindicación",
+        "Prueba del dominio y títulos",
+        "Nulidad o cancelación de inscripción registral",
+        "Accesión",
+        "Ocupación y hallazgo",
+        "Bienes muebles e inmuebles",
+        "Bienes nacionales y de uso público",
+        "Acción de dominio sobre vehículos y bienes muebles",
+        "Prestaciones mutuas (frutos y mejoras) en la reivindicación"
+      ]
+    },
+    {
+      "nombre": "Posesión y prescripción adquisitiva",
+      "subcategorias": [
+        "Posesión y sus elementos",
+        "Mera tenencia",
+        "Prescripción adquisitiva ordinaria de dominio",
+        "Prescripción adquisitiva extraordinaria de dominio",
+        "Justo título y buena fe",
+        "Interrupción y suspensión de la prescripción adquisitiva",
+        "Agregación de posesiones",
+        "Prescripción adquisitiva contra el copropietario o el heredero",
+        "Prescripción adquisitiva de bienes municipales o del Estado",
+        "Amparo posesorio y acciones posesorias",
+        "Despojo violento",
+        "Denuncia de obra nueva y obra ruinosa",
+        "Prueba de la posesión"
+      ]
+    },
+    {
+      "nombre": "Copropiedad, partición y propiedad horizontal",
+      "subcategorias": [
+        "Comunidad y copropiedad",
+        "Partición de bienes comunes",
+        "Partición de bienes de la sociedad conyugal disuelta",
+        "Deslinde y amojonamiento",
+        "Medianería",
+        "Propiedad horizontal: régimen y reglamento",
+        "Expensas y cuotas de administración",
+        "Asamblea de copropietarios y administrador",
+        "Adjudicación y venta en pública subasta de bienes indivisos"
+      ]
+    },
+    {
+      "nombre": "Servidumbres y limitaciones al dominio",
+      "subcategorias": [
+        "Servidumbre de tránsito",
+        "Servidumbre de acueducto y aguas",
+        "Servidumbres legales y voluntarias",
+        "Constitución, ejercicio y extinción de servidumbres",
+        "Usufructo",
+        "Uso y habitación",
+        "Patrimonio familiar",
+        "Prohibiciones de enajenar y limitaciones convencionales"
+      ]
+    },
+    {
+      "nombre": "Sucesiones",
+      "subcategorias": [
+        "Sucesión intestada",
+        "Sucesión testamentaria",
+        "Nulidad de testamento",
+        "Reforma de testamento y legítimas",
+        "Petición de herencia",
+        "Posesión efectiva",
+        "Inventario y avalúo de bienes sucesorios",
+        "Partición hereditaria",
+        "Aceptación y repudiación de la herencia",
+        "Deudas hereditarias y responsabilidad de los herederos",
+        "Legados y asignaciones",
+        "Colación y acervo imaginario",
+        "Indignidad y desheredamiento",
+        "Albaceas y administración de la sucesión"
+      ]
+    },
+    {
+      "nombre": "Títulos valores y procedimiento ejecutivo",
+      "subcategorias": [
+        "Pagaré a la orden",
+        "Letra de cambio",
+        "Cheque",
+        "Factura comercial y otros títulos ejecutivos",
+        "Requisitos del título ejecutivo",
+        "Obligación clara, determinada, líquida, pura y de plazo vencido",
+        "Excepciones en el procedimiento ejecutivo",
+        "Pago y abonos parciales",
+        "Falsedad y alteración del título",
+        "Prescripción de la acción cambiaria y ejecutiva",
+        "Endoso, aval y solidaridad cambiaria",
+        "Protesto y presentación al pago",
+        "Auto de pago y oposición",
+        "Embargo, avalúo y remate",
+        "Comisión, intereses y gastos reclamables en títulos valores (art. 166 C. Comercio)"
+      ]
+    },
+    {
+      "nombre": "Procedimiento monitorio",
+      "subcategorias": [
+        "Procedencia del procedimiento monitorio",
+        "Requisitos y documentos de la deuda",
+        "Cuantía del monitorio",
+        "Oposición al requerimiento de pago",
+        "Cobro de expensas de propiedad horizontal por vía monitoria",
+        "Cobro de cánones de arrendamiento por vía monitoria"
+      ]
+    },
+    {
+      "nombre": "Derecho societario",
+      "subcategorias": [
+        "Constitución y nulidad de la compañía",
+        "Impugnación de resoluciones de junta general",
+        "Nulidad de resoluciones de junta general",
+        "Disolución y liquidación de compañías",
+        "Exclusión y separación de socios",
+        "Cesión de participaciones y transferencia de acciones",
+        "Derechos de los socios y accionistas",
+        "Responsabilidad de administradores y representantes legales",
+        "Inoponibilidad de la personalidad jurídica (velo societario)",
+        "Sociedades por acciones simplificadas",
+        "Aumento y reducción de capital",
+        "Reparto de utilidades y dividendos",
+        "Cuentas en participación y asociaciones",
+        "Superintendencia de Compañías, Valores y Seguros: resoluciones"
+      ]
+    },
+    {
+      "nombre": "Contratos y operaciones mercantiles",
+      "subcategorias": [
+        "Compraventa mercantil",
+        "Contrato de seguro",
+        "Siniestro, cobertura y pago de la indemnización del seguro",
+        "Contrato de transporte terrestre, marítimo y aéreo",
+        "Contratos de distribución, agencia y franquicia",
+        "Cuenta corriente, depósitos y otros contratos bancarios (excepto tarjetas de crédito)",
+        "Tarjetas de crédito (contrato de emisión y uso, estados de cuenta) y créditos de consumo",
+        "Fideicomiso mercantil y encargo fiduciario",
+        "Factoring y descuento",
+        "Contratos de suministro y prestación de servicios mercantiles",
+        "Comisión mercantil",
+        "Propiedad intelectual e industrial en sede civil",
+        "Comercio electrónico y mensajes de datos"
+      ]
+    },
+    {
+      "nombre": "Insolvencia y concurso de acreedores",
+      "subcategorias": [
+        "Presunción de insolvencia",
+        "Concurso de acreedores voluntario y necesario",
+        "Concurso preventivo",
+        "Calificación de la insolvencia",
+        "Rehabilitación del fallido",
+        "Prelación de créditos",
+        "Efectos de la declaratoria de insolvencia",
+        "Cesión de bienes"
+      ]
+    },
+    {
+      "nombre": "Medidas cautelares y tercerías",
+      "subcategorias": [
+        "Secuestro",
+        "Retención",
+        "Prohibición de enajenar",
+        "Requisitos y caución de las medidas cautelares",
+        "Levantamiento y cancelación de medidas cautelares",
+        "Tercería excluyente de dominio",
+        "Tercería coadyuvante",
+        "Embargo de bienes de terceros",
+        "Remate y adjudicación"
+      ]
+    },
+    {
+      "nombre": "Prescripción extintiva y caducidad",
+      "subcategorias": [
+        "Prescripción extintiva de acciones ordinarias",
+        "Prescripción extintiva de acciones ejecutivas",
+        "Prescripciones de corto tiempo",
+        "Interrupción de la prescripción extintiva",
+        "Suspensión de la prescripción extintiva",
+        "Renuncia de la prescripción",
+        "Caducidad de la acción",
+        "Prescripción alegada como excepción y declaración judicial"
+      ]
+    },
+    {
+      "nombre": "Prueba en materia civil",
+      "subcategorias": [
+        "Carga de la prueba",
+        "Instrumentos públicos y escrituras públicas",
+        "Instrumentos privados y reconocimiento de firma",
+        "Impugnación y falsedad de documentos",
+        "Prueba pericial de avalúo",
+        "Prueba pericial contable y liquidación",
+        "Prueba pericial grafotécnica y documentológica",
+        "Inspección judicial",
+        "Prueba testimonial",
+        "Declaración de parte",
+        "Prueba nueva y prueba no anunciada",
+        "Valoración de la prueba y sana crítica",
+        "Prueba electrónica y mensajes de datos",
+        "Exhibición de documentos",
+        "Certificados registrales como prueba",
+        "Valor probatorio de estados de cuenta, liquidaciones y certificaciones de entidades financieras (art. 225 COMF)"
+      ]
+    },
+    {
+      "nombre": "Procedimiento civil",
+      "subcategorias": [
+        "Procedimiento ordinario",
+        "Procedimiento sumario",
+        "Procedimiento voluntario",
+        "Ejecución de sentencias, actas de mediación y transacciones (arts. 362 y ss. COGEP)",
+        "Competencia por materia, territorio y cuantía",
+        "Legitimación activa y pasiva",
+        "Personería y representación procesal",
+        "Litisconsorcio y herederos presuntos y desconocidos",
+        "Citación y comparecencia",
+        "Rebeldía y falta de contestación o de excepciones (arts. 157 y 352 COGEP)",
+        "Reconvención",
+        "Excepciones previas",
+        "Audiencia preliminar y de juicio",
+        "Nulidad procesal",
+        "Abandono del proceso",
+        "Desistimiento",
+        "Conciliación y mediación",
+        "Transacción judicial y aprobación de acuerdos que terminan el proceso (art. 235 COGEP)",
+        "Cosa juzgada",
+        "Litispendencia",
+        "Acumulación de pretensiones y de procesos",
+        "Ejecución de la sentencia",
+        "Costas y honorarios",
+        "Recurso de apelación",
+        "Recurso de casación",
+        "Motivación de la sentencia",
+        "Congruencia de la sentencia",
+        "Arbitraje y cláusula compromisoria",
+        "Procedimiento ejecutivo (arts. 347 y ss. COGEP)"
+      ]
+    }
+  ],
+  "tribunales": [
+    "Unidad Judicial Civil con Sede en el Cantón Gualaceo, Provincia del Azuay",
+    "Unidad Judicial Civil con Sede en el Cantón Paute, Provincia del Azuay",
+    "Unidad Judicial Civil Cuenca",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Sigsig",
+    "Unidad Judicial Multicompetente de Girón",
+    "Unidad Judicial Multicompetente de Santa Isabel",
+    "Unidad Judicial Multicompetente de San Fernando",
+    "Unidad Judicial Multicompetente de Oña",
+    "Unidad Judicial Multicompetente de Ponce Enríquez",
+    "Unidad Judicial Multicompetente con Sede en el Cantón San José de Chimbo",
+    "Unidad Judicial Multicompetente Sede en el Cantón Echeandía, Provincia de Bolívar",
+    "Unidad Judicial Civil con Sede en el Cantón Guaranda",
+    "Unidad Judicial Multicompetente con Sede en el Cantón San Miguel",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Caluma",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Las Naves",
+    "Unidad Judicial Multicompetente con Sede en el Canton Chillanes",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Biblián Provincia de Cañar",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Déleg",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón la Troncal",
+    "Unidad Judicial Civil con Sede en el Cantón Cañar Provincia del Cañar",
+    "Unidad Judicial Civil con Sede en el Cantón Azogues Provincia del Cañar",
+    "Unidad Judicial Multicompetente con Sede en el Cantón el Tambo, Provincia de Cañar",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Bolivar, Provincia del Carchi",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Mira, Provincia del Carchi",
+    "Unidad Judicial Civil con Sede en el Cantón Tulcán, Provincia de Carchi",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Montufar, Provincia del Carchi",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Espejo, Provincia del Carchi",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Saquisilí",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Pangua",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Pujilí, Provincia de Cotopaxi",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Salcedo",
+    "Unidad Judicial Civil con Sede en el Cantón Latacunga",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Sigchos",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón la Maná, Provincia de Cotopaxi",
+    "Unidad Judicial Multicompetente con Sede en el Canton Alausi",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Guano",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Chunchi",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Pallatanga",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Guamote",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Colta",
+    "Unidad Judicial Civil con Sede en el Cantón Riobamba",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Cumanda",
+    "Unidad Judicial Civil con Sede en el Cantón Santa Rosa",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Piñas",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Arenillas",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Atahualpa",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Portovelo",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón el Guabo",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Huaquillas",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Balsas",
+    "Unidad Judicial Civil con Sede en el Cantón Machala",
+    "Unidad Judicial Civil con Sede en el Cantón Pasaje",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Zaruma",
+    "Unidad Judicial Multicompetente de San Lorenzo",
+    "Unidad Judicial Multicompetente con Sede en la Parroquia Borbón, del Cantón Eloy Alfaro, Provincia de Esmeraldas",
+    "Unidad Judicial Multicompetente con Sede en la Parroquia Valdez del Canto Eloy Alfaro, Provincia de Esmeraldas",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Atacames, Provincia de Esmeraldas",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Muisne, Provincia de Esmeraldas",
+    "Unidad Judicial Civil de Esmeraldas",
+    "Unidad Judicial Multicompetente Civil de Quinindé",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Empalme Prov. del Guayas",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Bucay",
+    "Unidad Judicial Civil con Sede en el Cantón Daule",
+    "Unidad Judicial Multicompetente con Sede en el Cantón San Jacinto de Yaguachi, Provincia del Guayas",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Naranjal",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Balzar",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Salitre de la Provincia del Guayas",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Naranjito",
+    "Unidad Judicial Multicompetente con Sede en el Cantón el Triunfo",
+    "Unidad Judicial Civil con Sede en el Cantón Durán",
+    "Unidad Judicial Civil con Sede en el Cantón Guayaquil",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Playas",
+    "Unidad Judicial Civil con Sede en el Cantón Milagro",
+    "Unidad Judicial Multicompetente con Sede en el Canton Pedro Carbo de la Provincia Guayas",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Antonio Ante",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Pimampiro, Provincia de Imbabura",
+    "Unidad Judicial Civil con Sede en el Cantón Otavalo, Provincia de Imbabura",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Ibarra",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Urcuqui",
+    "Unidad Judicial Multicompetente con Sede en el Canton Gonzanama Provincia de Loja",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Espíndola Provincia de Loja",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Saraguro Provincia de Loja",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Puyango, Provincia de Loja",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Zapotillo Provincia de Loja",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Pindal Provincia de Loja",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Catamayo, Provincia de Loja",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Macará, Provincia de Loja",
+    "Unidad Judicial Civil con Sede en el Cantón Loja, Provincia de Loja",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Calvas, Provincia de Loja",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Célica, Provincia de Loja",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Chaguarpamba, Provincia de Loja",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Ventanas",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Urdaneta",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Baba",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Montalvo",
+    "Unidad Judicial Civil con Sede en el Cantón Quevedo",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Puebloviejo",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Vinces",
+    "Unidad Judicial Civil con Sede en el Cantón Babahoyo",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Mocache",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Valencia",
+    "Unidad Judicial Multicompetente con Sede en el Cantón 24 de Mayo, Provincia de Manabi",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Junin",
+    "Unidad Judicial Multicompetente con Sede en el Canton Bolivar de la Provincia de Manabi",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Rocafuerte",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Santa Ana",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Tosagua",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Flavio Alfaro",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Jipijapa, Provincia de Manabi",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Chone, Provincia de Manabi",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Pichincha",
+    "Unidad Judicial Civil de Portoviejo",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón el Carmen, Provincia de Manabí",
+    "Unidad Judicial Civil con Sede en el Cantón Sucre",
+    "Unidad Judicial Civil con Sede en el Cantón Manta",
+    "Unidad Judicial Multicompetente con el Sede en el Cantón Jama",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Pedernales",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Santiago de Mendez",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Gualaquiza",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Limon Indanza",
+    "Unidad Judicial Multicompetente de Sucúa",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Palora",
+    "Unidad Judicial Civil con Sede en el Cantón Morona",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Quijos",
+    "Unidad Judicial Civil con Sede en el Cantón Tena",
+    "Unidad Judicial Civil con Sede en el Cantón Pastaza",
+    "Unidad Judicial Civil con Sede en la Parroquia Iñaquito del Distrito Metropolitano de Quito, Provincia de Pichincha",
+    "Unidad Judicial Civil con Sede en el Cantón Rumiñahui, Provincia de Pichincha",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Puerto Quito",
+    "Unidad Judicial Civil con Sede en la Parroquia Quitumbe del Distrito Metropolitano de Quito, Provincia de Pichincha",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Pedro Vicente Maldonado, Provincia de Pichincha",
+    "Unidad Judicial Civil del Cantón Cayambe",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Mejía, Provincia de Pichincha",
+    "Unidad Judicial Multicompetente con Sede en el Cantón San Miguel de los Bancos, Provincia de Pichincha",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Baños, Provincia de Tungurahua",
+    "Unidad Judicial Multicompetente con Sede en el Canton Pelileo, Provincia de Tungurahua",
+    "Unidad Judicial Multicompetente con Sede en el Canton Pillaro",
+    "Unidad Judicial Civil con Sede en el Cantón Ambato",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Chinchipe, Provincia",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Centinela del Condor, Provincia",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Yantzaza, Provincia",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón Zamora, Provincia",
+    "Unidad Judicial Multicompetente con Sede en el Cantón el Pangui, Provincia",
+    "Unidad Judicial Multicompetente con Sede en el Cantón San Cristobal",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Santa Cruz",
+    "Unidad Judicial Civil con Sede en el Cantón Lago Agrio, Provincia de Sucumbios",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Shushufindi, Provincia de Sucumbios",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Gonzalo Pizarro, de la Provincia de Sucumbios",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Cuyabeno de la Provincia de Sucumbios",
+    "Unidad Judicial Civil con Sede en el Cantón Fco. de Orellana",
+    "Unidad Judicial Multicompetente Civil con Sede en el Cantón la Joya de los Sachas.",
+    "Unidad Judicial Multicompetente con Sede en el Cantón Loreto.",
+    "Unidad Judicial Civil del Cantón Santo Domingo",
+    "Unidad Judicial Multicompetente con Sede en la Parroquia Manglaralto del Cantón Santa Elena , Provincia de Santa Elena",
+    "Unidad Judicial Civil con Sede en el Cantón Santa Elena, Provincia de Santa Elena"
+  ],
+  "causales_invocadas": [
+    "Causal 1 - Aplicación indebida, falta de aplicación o errónea interpretación de normas procesales que hayan viciado el proceso de nulidad insubsanable o provocado indefensión grave.",
+    "Causal 2 - Ausencia de requisitos legales, decisiones contradictorias o incompatibles en la parte dispositiva, o falta de motivación.",
+    "Causal 3 - Resolver sobre puntos no litigados, conceder más de lo pedido u omitir resolver algún aspecto del conflicto.",
+    "Causal 4 - Error en la aplicación de normas sobre valoración de la prueba que haya conducido a una equivocada aplicación o a la no aplicación de normas de derecho sustantivo.",
+    "Causal 5 - Aplicación indebida, falta de aplicación o errónea interpretación de normas de derecho sustantivo, incluyendo los precedentes jurisprudenciales obligatorios, que hayan sido determinantes en la parte dispositiva."
+  ]
+}

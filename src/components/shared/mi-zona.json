@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_mi_zonas",
+  "info": {
+    "displayName": "Mi zona"
+  },
+  "options": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    }
+  }
+}

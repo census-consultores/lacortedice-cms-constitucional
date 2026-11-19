@@ -1,0 +1,101 @@
+# Blueprint de Render para la materia GARANTÍAS CONSTITUCIONALES: base de datos + CMS (Strapi) + worker extractor.
+# Se crea desde Render → New → Blueprint → este repo. Los secretos de Strapi se generan solos;
+# las claves de IA y el token de Strapi para el worker se ingresan a mano (sync: false).
+databases:
+  - name: lacortedice-db-constitucional
+    databaseName: lacortedice_constitucional
+    plan: basic-256mb
+    region: oregon
+
+services:
+  - type: web
+    name: lacortedice-cms-constitucional
+    runtime: node
+    repo: https://github.com/census-consultores/lacortedice-cms-constitucional
+    branch: main
+    region: oregon
+    plan: standard
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    healthCheckPath: /_health
+    disk:
+      name: uploads
+      mountPath: /opt/render/project/src/public/uploads
+      sizeGB: 20
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_CLIENT
+        value: postgres
+      - key: DATABASE_URL
+        fromDatabase:
+          name: lacortedice-db-constitucional
+          property: connectionString
+      - key: PUBLIC_URL
+        value: https://lacortedice-cms-constitucional.onrender.com
+      - key: APP_KEYS
+        generateValue: true
+      - key: API_TOKEN_SALT
+        generateValue: true
+      - key: ADMIN_JWT_SECRET
+        generateValue: true
+      - key: TRANSFER_TOKEN_SALT
+        generateValue: true
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ENCRYPTION_KEY
+        generateValue: true
+      - key: CRON_ENABLED
+        value: "false"
+      - key: DIGESTS_ENABLED
+        value: "false"
+      - key: ANALYTICS_INGEST_ENABLED
+        value: "false"
+      - key: MAIL_DRY_RUN
+        value: "true"
+      - key: SEED_MATERIA
+        value: constitucional
+
+  - type: web
+    name: lacortedice-worker-constitucional
+    runtime: docker
+    repo: https://github.com/census-consultores/lacortedice-extractor-constitucional
+    branch: main
+    region: oregon
+    plan: standard
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: WORKER_API_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: lacortedice-db-constitucional
+          property: connectionString
+      - key: STRAPI_URL
+        value: https://lacortedice-cms-constitucional.onrender.com
+      - key: STRAPI_API_TOKEN
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: DEEPINFRA_API_KEY
+        sync: false
+      - key: MAX_CONCURRENT_JOBS
+        value: "6"
+      # Salida a SATJE por Bright Data (sin ella el worker bloquea las consultas en Render).
+      - key: BDATA_DATACENTER_PROXY_URL
+        sync: false
+      # Índice ya construido por el worker penal: se importa con scripts/importar_indice.py.
+      - key: INDICE_ORIGEN_URL
+        fromDatabase:
+          name: lacortedice-db-penal
+          property: connectionString
+      # Se pone después de importar el índice:
+      # {"tribunales":"especializadas","desde":2008,"indice":true,"desde_indice":true,"hilos_indice":6}
+      - key: COLA_AUTOMATICA
+        sync: false
+      - key: PORT
+        value: "8000"

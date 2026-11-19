@@ -1,0 +1,1 @@
+Pruebas aisladas sobre PostgreSQL embebido (PGlite). No utilizan producción. Requieren los repositorios lacortedice-cms y lacortedice-webapp como carpetas hermanas. Ejecutar npm install y npm test en esta carpeta.

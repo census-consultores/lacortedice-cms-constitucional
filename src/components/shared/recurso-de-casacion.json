@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_recurso_de_casacions",
+  "info": {
+    "displayName": "Recurso de casación"
+  },
+  "options": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    }
+  }
+}

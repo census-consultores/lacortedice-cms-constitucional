@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recurrentes",
+  "info": {
+    "singularName": "recurrente",
+    "pluralName": "recurrentes",
+    "displayName": "Recurrente",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

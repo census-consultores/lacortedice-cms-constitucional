@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>La Corte Dice Tributaria, ahora en aplicacion movil</title>
+    <!--
+      Invitacion a profesionales del derecho tributario.
+
+      REGLAS, por instruccion expresa:
+       · No se nombra ningun gremio, colegio ni asociacion.
+       · Firma institucional. Sin emojis. Cuerpo justificado.
+       · Pocas palabras: la informacion relevante va arriba y en forma de
+         cifras y tabla, no de parrafos.
+       · Solo se afirma lo que el repositorio CONTIENE: instancias de los
+         Tribunales Distritales de lo Contencioso Tributario y casaciones de
+         la Corte Nacional. NO hay Corte Constitucional.
+       · Cifras del panel al 2026-09-16. Si el correo se reutiliza mas
+         adelante hay que actualizarlas, por eso van con fecha de corte.
+
+      INSIGNIAS DE TIENDA: son las OFICIALES en espanol, descargadas de las
+      propias paginas de marca de Apple y de Google y solo escaladas, que es
+      lo que exigen sus condiciones de uso. Viven en
+      static/images/email/insignia-appstore.png e insignia-googleplay.png.
+      No sustituirlas por versiones dibujadas a mano ni recortadas.
+
+      Variables: {{saludo}}, {{url_ios}}, {{url_android}}, {{assets_url}}.
+    -->
+    <style>
+      body { margin:0; padding:0; background:#f1ece0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; color:#1a1a1a; }
+      .wrap { width:100%; background:#f1ece0; padding:32px 16px; }
+      .card { max-width:620px; margin:0 auto; background:#ffffff; border-radius:4px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,.06); }
+
+      .hero { background:#0A0A0A; padding:38px 40px 30px 40px; text-align:center; background-image:radial-gradient(circle at top right, rgba(180,154,58,.20) 0%, transparent 55%); }
+      .kicker { color:#B49A3A; font-size:10.5px; letter-spacing:3.6px; font-weight:700; text-transform:uppercase; margin:22px 0 14px 0; }
+      .hero-title { color:#ffffff; font-size:31px; font-weight:700; line-height:1.18; margin:0; font-family:Georgia,"Times New Roman",serif; letter-spacing:-.5px; }
+      .hero-gold { color:#B49A3A; }
+      .hero-sub { color:#d9cfae; font-size:15px; line-height:1.55; margin:14px auto 0 auto; max-width:420px; }
+
+      .iconstrip { background:#0A0A0A; padding:0 40px 34px 40px; text-align:center; }
+      .appicon { width:96px; height:96px; border-radius:21px; border:1px solid rgba(180,154,58,.55); display:block; margin:0 auto; }
+      .appicon-cap { color:#8a8272; font-size:11px; letter-spacing:2.4px; text-transform:uppercase; margin:12px 0 0 0; }
+
+      /* El <td align="center"> del contenedor centra todo por herencia; el
+         cuerpo vuelve a alinearse a la izquierda, que es como se lee un texto
+         largo. La cabecera y los botones sí quedan centrados. */
+      .body { padding:38px 40px 34px 40px; text-align:left; }
+      .lead { font-size:16px; line-height:1.65; color:#333; margin:0 0 22px 0; }
+      .lead strong { color:#0A0A0A; }
+
+      .feature-row { border:1px solid #e8e0cb; border-left:4px solid #B49A3A; border-radius:3px; padding:20px 24px; background:#faf7ee; margin-bottom:12px; }
+      .feature-title { font-size:12.5px; letter-spacing:2px; color:#8a7530; text-transform:uppercase; font-weight:700; margin:0 0 7px 0; }
+      .feature-text { font-size:14.5px; line-height:1.6; color:#333; margin:0; }
+      .feature-text strong { color:#0A0A0A; }
+
+      .storeblock { margin:34px 0 6px 0; }
+      .storebtn { display:block; text-decoration:none; border-radius:8px; padding:15px 20px; text-align:center; }
+      .store-ios { background:#0A0A0A; border:1.5px solid #0A0A0A; }
+      .store-and { background:#ffffff; border:1.5px solid #0A0A0A; }
+      .store-kick { display:block; font-size:10px; letter-spacing:2.6px; text-transform:uppercase; font-weight:700; margin-bottom:3px; }
+      .store-name { display:block; font-size:17px; font-weight:700; letter-spacing:-.2px; }
+
+      .access { background:#0A0A0A; color:#d9cfae; padding:22px 26px; border-radius:3px; margin:30px 0 0 0; }
+      .access p { margin:0; font-size:14.5px; line-height:1.6; }
+      .access strong { color:#B49A3A; }
+      .access a { color:#B49A3A; }
+
+      .small-note { font-size:12.5px; color:#777; text-align:center; margin:18px 0 0 0; line-height:1.6; }
+      .small-note a { color:#0A0A0A; font-weight:600; }
+
+      .footer { background:#0A0A0A; padding:28px 40px; text-align:center; color:#888; font-size:12px; line-height:1.7; }
+      .footer-brand { color:#B49A3A; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; font-family:Georgia,serif; }
+      .footer a { color:#B49A3A; text-decoration:none; }
+
+      @media only screen and (max-width:620px) {
+        .hero { padding:30px 22px 24px 22px; }
+        .gratis { padding:16px 22px; }
+        .iconstrip { padding:0 22px 28px 22px; }
+        .body { padding:28px 22px 26px 22px; }
+        .footer { padding:24px 22px; }
+        .hero-title { font-size:26px; }
+      }
+    </style>
+    
+    <style>
+      .lead, .nota-tabla { text-align:justify; }
+      .lead { font-size:15.5px; }
+
+      /* Franja de cifras: lo primero que se ve bajo el titular. */
+      .cifras { width:100%; border-collapse:collapse; margin:0; }
+      .cifras td { width:33.33%; text-align:center; padding:22px 6px; background:#faf7ee; border-right:1px solid #ece0c2; }
+      .cifras td:last-child { border-right:0; }
+      .cifra-n { display:block; font-size:30px; font-weight:700; color:#0A0A0A; line-height:1; font-variant-numeric:tabular-nums; font-family:Georgia,"Times New Roman",serif; }
+      .cifra-r { display:block; font-size:11px; letter-spacing:1.6px; text-transform:uppercase; color:#8a7530; font-weight:700; margin-top:8px; }
+
+      .sec { font-size:12px; letter-spacing:2px; color:#8a7530; text-transform:uppercase; font-weight:700; margin:32px 0 12px 0; }
+
+      /* Cobertura */
+      .cob { width:100%; border-collapse:collapse; margin:0 0 8px 0; }
+      .cob th { font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:#8a7530; font-weight:700; text-align:left; padding:0 8px 7px 0; border-bottom:1.5px solid #e0d3ad; }
+      .cob th.n, .cob td.n { text-align:right; white-space:nowrap; }
+      .cob td { font-size:14px; color:#333; padding:8px 8px 8px 0; border-bottom:1px solid #f0ebdd; }
+      .cob td.n { font-variant-numeric:tabular-nums; font-weight:600; color:#0A0A0A; }
+      .cob td.a { color:#8a8272; font-size:12.5px; white-space:nowrap; }
+      .cob tr.cnj td { background:#faf7ee; }
+      .cob tr.tot td { border-top:1.5px solid #e0d3ad; border-bottom:0; font-weight:700; color:#0A0A0A; padding-top:10px; }
+      .nota-tabla { font-size:11.5px; color:#8a8272; margin:0; line-height:1.55; }
+
+      /* La ficha, mostrada como ficha */
+      .fichacard { border:1px solid #e0d3ad; border-radius:4px; overflow:hidden; margin:0; }
+      .fichacard-top { background:#0A0A0A; padding:13px 18px; }
+      .fichacard-top .t1 { display:block; color:#B49A3A; font-size:10px; letter-spacing:2.4px; text-transform:uppercase; font-weight:700; }
+      .fichacard-top .t2 { display:block; color:#ffffff; font-size:15px; font-weight:700; margin-top:4px; font-family:Georgia,serif; }
+      .fila { width:100%; border-collapse:collapse; }
+      .fila td { padding:11px 18px; border-bottom:1px solid #f2ede1; font-size:13.5px; color:#444; vertical-align:top; line-height:1.5; }
+      .fila tr:last-child td { border-bottom:0; }
+      .fila td.k { width:40%; color:#0A0A0A; font-weight:700; font-size:12.5px; }
+      .fila tr:nth-child(even) td { background:#fdfcf8; }
+
+      /* Filtros */
+      .chips { margin:0; font-size:0; line-height:0; }
+      .chip { display:inline-block; font-size:12.5px; line-height:1; color:#5a5344; background:#f4efe1; border:1px solid #e6dcc4; border-radius:999px; padding:8px 13px; margin:0 6px 7px 0; }
+      /* Franja de gratuidad. Va en su propia banda, entre el encabezado y las
+         cifras, porque es lo que decide si la persona sigue leyendo: la
+         sospecha por defecto ante cualquier app es «esto despues cobra», y
+         mientras esa sospecha siga en pie el resto del correo no se lee. */
+      .gratis { background:#B49A3A; padding:18px 40px; text-align:center; }
+      .gratis-t { display:block; color:#0A0A0A; font-size:17px; font-weight:700; letter-spacing:-.2px; font-family:Georgia,"Times New Roman",serif; }
+      .gratis-s { display:block; color:#2e2712; font-size:13.5px; line-height:1.5; margin-top:6px; }
+
+      /* Botones de tienda, mas grandes y con hueco para la insignia oficial */
+      .tienda { border-radius:9px; padding:15px 18px; text-align:center; }
+      .t-ios { background:#0A0A0A; border:2px solid #0A0A0A; }
+      .t-and { background:#ffffff; border:2px solid #0A0A0A; }
+      .t-k { display:block; font-size:10px; letter-spacing:2.4px; text-transform:uppercase; font-weight:700; margin-bottom:5px; }
+      .t-n { display:block; font-size:18px; font-weight:700; letter-spacing:-.2px; }
+      .t-badge { display:block; margin:0 auto 9px auto; border:0; }
+    </style>
+  </head>
+  <body>
+    <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;height:0;width:0">
+      Gratis: 3.646 causas de los Tribunales Distritales de lo Contencioso Tributario y 775 casaciones de la Corte Nacional, cada una con su ficha tecnica. Sin prueba limitada y sin tarjeta.
+    </div>
+
+    <div class="wrap">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td align="center">
+            <div class="card">
+
+              <div class="hero">
+                <img src="{{assets_url}}/logo-claro.png" width="140" height="60" alt="La Corte Dice Tributaria" style="display:block;width:140px;height:60px;margin:0 auto;border:0;" />
+                <p class="kicker">Gratis · Ya disponible para iPhone y Android</p>
+                <h1 class="hero-title">
+                  4.418 resoluciones,<br /><span class="hero-gold">cada una con su ficha.</span>
+                </h1>
+                <p class="hero-sub">
+                  Jurisprudencia contencioso tributaria del Ecuador, lista para consultar
+                  desde el teléfono.
+                </p>
+              </div>
+
+              <!-- GRATUIDAD: antes que las cifras a proposito.
+                   Decir «gratis» no basta: ante cualquier app la sospecha por
+                   defecto es que despues cobra, y mientras esa sospecha siga
+                   en pie el resto del correo no se lee. Por eso se nombran las
+                   tres formas concretas de cobrar que NO existen, en vez de
+                   repetir el adjetivo. -->
+              <div class="gratis">
+                <span class="gratis-t">Gratis. Sin prueba limitada, sin tarjeta, sin suscripción.</span>
+                <span class="gratis-s">
+                  Descargar la app, crear la cuenta y consultar el repositorio completo no
+                  cuesta nada. Dentro de la aplicación no hay nada que comprar.
+                </span>
+              </div>
+
+              <!-- CIFRAS: lo primero, antes de cualquier parrafo -->
+              <table role="presentation" class="cifras" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td><span class="cifra-n">3.646</span><span class="cifra-r">Causas de instancia</span></td>
+                  <td><span class="cifra-n">775</span><span class="cifra-r">Casaciones CNJ</span></td>
+                  <td><span class="cifra-n">99&nbsp;%</span><span class="cifra-r">Con PDF</span></td>
+                </tr>
+              </table>
+
+              <!-- DESCARGA: arriba, no al final.
+                   Insignia oficial a la izquierda y el texto a la derecha, dentro de
+                   la misma fila. Cada celda lleva su propio <a> al mismo destino:
+                   envolver una <table> en un <a> se rompe en Outlook. -->
+              <div style="padding:26px 40px 8px 40px">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="tienda t-ios">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                        <tr>
+                          <td style="padding-right:16px;vertical-align:middle">
+                            <a href="{{url_ios}}"><img src="{{assets_url}}/insignia-appstore.png" width="119" height="40" alt="Descárgalo en el App Store" style="display:block;border:0;width:119px;height:40px" /></a>
+                          </td>
+                          <td style="vertical-align:middle;text-align:left">
+                            <a href="{{url_ios}}" style="text-decoration:none">
+                              <span class="t-k" style="color:#8a7530">iPhone y iPad</span>
+                              <span class="t-n" style="color:#ffffff">Descargar gratis</span>
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr><td style="height:10px;line-height:10px;font-size:0">&nbsp;</td></tr>
+                  <tr>
+                    <td class="tienda t-and">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                        <tr>
+                          <td style="padding-right:16px;vertical-align:middle">
+                            <a href="{{url_android}}"><img src="{{assets_url}}/insignia-googleplay.png" width="103" height="40" alt="Descargar en Google Play" style="display:block;border:0;width:103px;height:40px" /></a>
+                          </td>
+                          <td style="vertical-align:middle;text-align:left">
+                            <a href="{{url_android}}" style="text-decoration:none">
+                              <span class="t-k" style="color:#8a7530">Android</span>
+                              <span class="t-n" style="color:#0A0A0A">Descargar gratis</span>
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <p class="small-note" style="margin-top:12px">
+                  Desde el teléfono, cada enlace conduce a la tienda que corresponde.
+                </p>
+              </div>
+
+              <div class="body" style="padding-top:18px">
+                <p class="lead">{{saludo}}:</p>
+                <p class="lead">
+                  <strong>La Corte Dice Tributaria</strong> es la plataforma de jurisprudencia
+                  tributaria de la <strong>Fundación Académica La Corte Dice</strong>. Nos
+                  dirigimos a usted, en su calidad de profesional del derecho, para poner en su
+                  conocimiento que el repositorio ya está disponible como aplicación móvil.
+                </p>
+
+                <p class="sec">Cobertura actual</p>
+
+                <table role="presentation" class="cob" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <th>Tribunal Distrital de lo Contencioso Tributario</th>
+                    <th class="n">Causas</th>
+                    <th class="n">Años</th>
+                  </tr>
+                  <tr><td>Guayas</td><td class="n">1.773</td><td class="n a">2019–2025</td></tr>
+                  <tr><td>Pichincha</td><td class="n">1.281</td><td class="n a">2019–2025</td></tr>
+                  <tr><td>Cuenca</td><td class="n">373</td><td class="n a">2020–2025</td></tr>
+                  <tr><td>Loja</td><td class="n">87</td><td class="n a">2020–2024</td></tr>
+                  <tr><td>Portoviejo</td><td class="n">69</td><td class="n a">2020–2024</td></tr>
+                  <tr><td>Tungurahua</td><td class="n">63</td><td class="n a">2020–2023</td></tr>
+                  <tr class="cnj"><td><strong>Casaciones · Corte Nacional de Justicia</strong></td><td class="n">775</td><td class="n a">2019–2023</td></tr>
+                  <tr class="tot"><td>Total</td><td class="n">4.418</td><td class="n a"></td></tr>
+                </table>
+                <p class="nota-tabla">
+                  Cifras al 16 de septiembre de 2026, por año del juicio. El repositorio se
+                  alimenta de forma continua.
+                </p>
+
+                <p class="sec">Cada fallo, en su ficha</p>
+
+                <div class="fichacard">
+                  <div class="fichacard-top">
+                    <span class="t1">Ficha de la causa</span>
+                    <span class="t2">Lo que usted lee antes del PDF</span>
+                  </div>
+                  <table role="presentation" class="fila" cellpadding="0" cellspacing="0" border="0">
+                    <tr><td class="k">Información general</td><td>Juicio, tribunal, estado, fechas y duración en días</td></tr>
+                    <tr><td class="k">Partes procesales</td><td>Actor, entidad demandada y sus abogados</td></tr>
+                    <tr><td class="k">Controversia</td><td>Acto impugnado, actos relacionados y cuantía</td></tr>
+                    <tr><td class="k">Argumentos y pruebas</td><td>De cada parte, por separado</td></tr>
+                    <tr><td class="k">Criterio del tribunal</td><td>Razonamiento de la sala y jurisprudencia invocada</td></tr>
+                    <tr><td class="k">Decisión final</td><td>Con voto salvado y argumento disidente, si los hay</td></tr>
+                    <tr><td class="k">Sentencia en PDF</td><td>Texto íntegro, a un toque</td></tr>
+                    <tr><td class="k">En casación</td><td>Recurrente, causales, criterio de la Sala y si se casó</td></tr>
+                  </table>
+                </div>
+
+                <p class="lead" style="margin-top:20px">
+                  Establecer si una sentencia sirve para su caso pasa a ser cuestión de
+                  <strong>minutos</strong>.
+                </p>
+
+                <p class="sec">La búsqueda filtra por</p>
+                <div class="chips">
+                  <span class="chip">Tribunal</span><span class="chip">Juez</span><span class="chip">Entidad demandada</span><span class="chip">Tipo de acción</span><span class="chip">Causal invocada</span><span class="chip">Decisión</span><span class="chip">Estado del proceso</span><span class="chip">Cuantía</span>
+                </div>
+
+                <div class="access" style="margin-top:28px">
+                  <p>
+                    <strong>Crear la cuenta es gratuito y toma un minuto.</strong> Ingrese con
+                    su cuenta de Google o de Apple, o cree una con su correo. No se pide
+                    tarjeta. Sin invitación ni habilitación previa. Los fallos descargados se
+                    consultan sin conexión.
+                  </p>
+                </div>
+
+                <p class="lead" style="margin-top:24px; margin-bottom:0; text-align:left">
+                  Cordialmente,<br />
+                  <strong>La Corte Dice Tributaria</strong><br />
+                  <span style="font-size:14px;color:#777">Fundación Académica La Corte Dice · Ecuador</span>
+                </p>
+              </div>
+
+              <div class="footer">
+                <span class="footer-brand">La Corte Dice Tributaria</span>
+                <div>Fundación Académica La Corte Dice · Ecuador</div>
+                <div style="margin-top:10px">
+                  <a href="https://lacortedicetributaria.com">lacortedicetributaria.com</a> ·
+                  <a href="mailto:info@lacortedicetributaria.com">info@lacortedicetributaria.com</a>
+                </div>
+                <div style="margin-top:16px; font-size:11px; color:#555; line-height:1.7">
+                  Usted recibe este mensaje por ejercer en el ámbito del derecho tributario en
+                  el Ecuador.<br />
+                  Si no desea recibir comunicaciones futuras,
+                  <a href="{{url_baja}}" style="color:#555;text-decoration:underline">dese de baja aquí</a>.
+                  Es inmediato y no hace falta responder.
+                </div>
+              </div>
+
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

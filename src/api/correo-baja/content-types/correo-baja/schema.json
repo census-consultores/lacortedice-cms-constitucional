@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "correo_bajas",
+  "info": {
+    "singularName": "correo-baja",
+    "pluralName": "correo-bajas",
+    "displayName": "Baja de correo",
+    "description": "Lista de supresion. Un correo aqui no vuelve a recibir envios masivos, venga de donde venga la campana. Se llena sola con el enlace de baja del pie y con la baja en un clic que disparan Gmail y Outlook desde su propio boton. Sin routes a proposito: no debe existir ningun endpoint publico que liste estas direcciones."
+  },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "correo": { "type": "string", "required": true, "unique": true, "maxLength": 254 },
+    "motivo": {
+      "type": "enumeration",
+      "enum": ["un_clic", "enlace", "manual", "rebote", "queja"],
+      "default": "un_clic",
+      "required": true
+    },
+    "campana": { "type": "string", "maxLength": 120 }
+  }
+}

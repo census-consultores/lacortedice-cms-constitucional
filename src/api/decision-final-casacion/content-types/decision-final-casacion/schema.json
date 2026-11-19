@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "decisiones_finales_casacion",
+  "info": {
+    "singularName": "decision-final-casacion",
+    "pluralName": "decisiones-finales-casacion",
+    "displayName": "Decisión final (Casación)"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "sigla": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

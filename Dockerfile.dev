@@ -1,0 +1,22 @@
+FROM node:18-alpine
+# Instalación de dependencias de sistema
+RUN apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev vips-dev git
+
+WORKDIR /opt/app
+
+# Copiar archivos de dependencias
+COPY package.json package-lock.json ./
+
+# Usamos npm install en lugar de ci para mayor flexibilidad en dev
+# pero borramos node_modules antes por seguridad si existiera
+RUN rm -rf node_modules && npm install
+
+# Copiar el resto del código
+COPY . .
+
+# Generar build de Strapi
+RUN npm run build
+
+EXPOSE 1337
+
+CMD ["npm", "run", "develop"]

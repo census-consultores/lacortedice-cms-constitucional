@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campana_correos",
+  "info": {
+    "singularName": "campana-correo",
+    "pluralName": "campana-correos",
+    "displayName": "Campana de correo",
+    "description": "Interruptor y ritmo de cada campana masiva. Las campanas encendidas forman una COLA: el cron atiende solo a la de menor `orden` y las demas esperan su turno, aunque esten encendidas. Eso hace dos cosas a la vez: respeta la prioridad que se quiera dar a cada lista, y sobre todo impide que dos campanas encendidas a la vez sumen sus ritmos y revienten el tope por hora de Titan. Cada 15 minutos sale una tanda de `porTanda` correos de la campana en turno; cuando termina se apaga sola y entra la siguiente. Apagarla frena el envio en el acto. Sin routes a proposito: se maneja desde el panel."
+  },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "clave": { "type": "string", "required": true, "unique": true, "maxLength": 120 },
+    "activa": { "type": "boolean", "default": false, "required": true },
+    "porTanda": { "type": "integer", "default": 11, "required": true },
+    "orden": { "type": "integer", "default": 100, "required": true },
+    "notas": { "type": "text" }
+  }
+}

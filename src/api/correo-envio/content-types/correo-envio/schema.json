@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "correo_envios",
+  "info": {
+    "singularName": "correo-envio",
+    "pluralName": "correo-envios",
+    "displayName": "Envio de correo",
+    "description": "Una fila por correo enviado. Es lo que permite mandar una campana a cuentagotas durante horas o dias sin que nadie la reciba dos veces: cada tanda consulta esta tabla para saber a quien le falta. Tambien deja el registro de los fallos. Sin routes a proposito."
+  },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "correo": { "type": "string", "required": true, "maxLength": 254 },
+    "campana": { "type": "string", "required": true, "maxLength": 120 },
+    "estado": {
+      "type": "enumeration",
+      "enum": ["enviado", "fallido"],
+      "default": "enviado",
+      "required": true
+    },
+    "destinatarioId": { "type": "integer" },
+    "error": { "type": "text" }
+  }
+}

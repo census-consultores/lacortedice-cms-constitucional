@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jueces",
+  "info": {
+    "singularName": "juez",
+    "pluralName": "jueces",
+    "displayName": "Juez",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "juez_tribunales": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tribunal.tribunal",
+      "inversedBy": "tribunal_jueces"
+    },
+    "causas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::causa.causa",
+      "mappedBy": "causa_jueces"
+    },
+    "casaciones": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::casacion.casacion",
+      "mappedBy": "jueces"
+    },
+    "apelaciones": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::apelacion.apelacion",
+      "mappedBy": "jueces"
+    }
+  }
+}

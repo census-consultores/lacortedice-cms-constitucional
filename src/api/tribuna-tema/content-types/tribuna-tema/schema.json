@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tribuna_temas",
+  "info": {
+    "singularName": "tribuna-tema",
+    "pluralName": "tribuna-temas",
+    "displayName": "Tribuna · Tema",
+    "description": "Un hilo de la Tribuna Tributaria: alguien abre un tema (una sentencia, una reforma, una duda) y la comunidad comenta debajo."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "titulo": {
+      "type": "string",
+      "required": true,
+      "maxLength": 180
+    },
+    "cuerpo": {
+      "type": "text",
+      "maxLength": 5000
+    },
+    "expedienteSlug": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": ["visible", "oculto"],
+      "default": "visible",
+      "required": true
+    },
+    "ultimaActividadAt": {
+      "type": "datetime"
+    }
+  }
+}

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>La Corte Dice Tributaria — ya está en tu celular y en tu computadora</title>
+    <!--
+      Lanzamiento de la app nativa, septiembre 2026: iOS, iPadOS, Android, Mac
+      con Apple silicon y Windows.
+
+      Dos botones cubren cuatro plataformas: el mismo binario de iOS corre en
+      iPad y, desde macOS Big Sur, en los Mac con chip de Apple, así que
+      {{url_ios}} sirve para los tres. Windows lleva botón propio porque es
+      otra tienda — y es CONDICIONAL: {{bloque_windows}} llega vacío mientras
+      Microsoft Store no esté publicada, y el resto del correo se ajusta solo
+      con {{plataformas}} y {{nota_escritorio}}. Ver windowsPublicado() en
+      mailer.ts.
+      Imágenes alojadas en el CMS ({{assets_url}} = public/email). Sin fuentes
+      externas ni SVG: Gmail los bloquea. Variables: {{nombre}},
+      {{bloque_acceso}} (HTML: cambia según si la persona ya tiene cuenta
+      activa o sólo recibió un usuario), {{url_ios}}, {{url_android}},
+      {{assets_url}}.
+    -->
+    <style>
+      body { margin:0; padding:0; background:#f1ece0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; color:#1a1a1a; }
+      .wrap { width:100%; background:#f1ece0; padding:32px 16px; }
+      .card { max-width:620px; margin:0 auto; background:#ffffff; border-radius:4px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,.06); }
+
+      .hero { background:#0A0A0A; padding:38px 40px 30px 40px; text-align:center; background-image:radial-gradient(circle at top right, rgba(180,154,58,.20) 0%, transparent 55%); }
+      .kicker { color:#B49A3A; font-size:10.5px; letter-spacing:3.6px; font-weight:700; text-transform:uppercase; margin:22px 0 14px 0; }
+      .hero-title { color:#ffffff; font-size:31px; font-weight:700; line-height:1.18; margin:0; font-family:Georgia,"Times New Roman",serif; letter-spacing:-.5px; }
+      .hero-gold { color:#B49A3A; }
+      .hero-sub { color:#d9cfae; font-size:15px; line-height:1.55; margin:14px auto 0 auto; max-width:420px; }
+      /* Franja de gratuidad: misma razón que en la invitación a profesionales.
+         Acá pesa sobre todo para los invitados que nunca estrenaron su usuario,
+         que no saben si esto les va a costar algo. */
+      .gratis { background:#B49A3A; padding:18px 40px; text-align:center; }
+      .gratis-t { display:block; color:#0A0A0A; font-size:17px; font-weight:700; letter-spacing:-.2px; font-family:Georgia,"Times New Roman",serif; }
+      .gratis-s { display:block; color:#2e2712; font-size:13.5px; line-height:1.5; margin-top:6px; }
+
+      .iconstrip { background:#0A0A0A; padding:0 40px 34px 40px; text-align:center; }
+      .appicon { width:96px; height:96px; border-radius:21px; border:1px solid rgba(180,154,58,.55); display:block; margin:0 auto; }
+      .appicon-cap { color:#8a8272; font-size:11px; letter-spacing:2.4px; text-transform:uppercase; margin:12px 0 0 0; }
+
+      /* El <td align="center"> del contenedor centra todo por herencia; el
+         cuerpo vuelve a alinearse a la izquierda, que es como se lee un texto
+         largo. La cabecera y los botones sí quedan centrados. */
+      .body { padding:38px 40px 34px 40px; text-align:left; }
+      .lead { font-size:16px; line-height:1.65; color:#333; margin:0 0 22px 0; }
+      .lead strong { color:#0A0A0A; }
+
+      .feature-row { border:1px solid #e8e0cb; border-left:4px solid #B49A3A; border-radius:3px; padding:20px 24px; background:#faf7ee; margin-bottom:12px; }
+      .feature-title { font-size:12.5px; letter-spacing:2px; color:#8a7530; text-transform:uppercase; font-weight:700; margin:0 0 7px 0; }
+      .feature-text { font-size:14.5px; line-height:1.6; color:#333; margin:0; }
+      .feature-text strong { color:#0A0A0A; }
+
+      .storeblock { margin:26px 0 6px 0; }
+      /* El botón es la CELDA, no el enlace.
+         Adentro va una tabla de dos columnas: la insignia oficial y el texto,
+         cada una con su propio <a> al mismo destino. Envolver una <table> en
+         un <a> se rompe en Outlook, que es la razón de esta forma. */
+      .tiendacell { border-radius:8px; padding:13px 18px; text-align:center; }
+      .store-ios { background:#0A0A0A; border:1.5px solid #0A0A0A; }
+      .store-and { background:#ffffff; border:1.5px solid #0A0A0A; }
+      /* Windows: mismo tratamiento que Google Play (fondo claro, borde negro).
+         El azul de Microsoft rompería la paleta negro + dorado + crema, y
+         tres botones de tres colores distintos convierten la llamada a la
+         acción en un semáforo. */
+      .store-win { background:#ffffff; border:1.5px solid #0A0A0A; }
+      .store-kick { display:block; font-size:10px; letter-spacing:2.6px; text-transform:uppercase; font-weight:700; margin-bottom:3px; }
+      .store-name { display:block; font-size:16px; font-weight:700; letter-spacing:-.2px; }
+
+      .access { background:#0A0A0A; color:#d9cfae; padding:22px 26px; border-radius:3px; margin:30px 0 0 0; }
+      .access p { margin:0; font-size:14.5px; line-height:1.6; }
+      .access strong { color:#B49A3A; }
+      .access a { color:#B49A3A; }
+
+      /* Nota del Mac: el mismo enlace de App Store sirve para iPhone, iPad y Mac
+         con Apple silicon, así que no hay un cuarto botón — sí hace falta decirlo,
+         porque nadie espera encontrar una app de iPhone en la tienda del Mac. */
+      .macnote { border:1px solid #e8e0cb; border-radius:3px; background:#faf7ee; padding:16px 20px; margin:16px 0 0 0; }
+      .macnote-t { font-size:12.5px; letter-spacing:2px; color:#8a7530; text-transform:uppercase; font-weight:700; margin:0 0 6px 0; }
+      .macnote-s { font-size:13.5px; line-height:1.6; color:#444; margin:0; }
+      .macnote-s strong { color:#0A0A0A; }
+
+      .small-note { font-size:12.5px; color:#777; text-align:center; margin:18px 0 0 0; line-height:1.6; }
+      .small-note a { color:#0A0A0A; font-weight:600; }
+
+      .footer { background:#0A0A0A; padding:28px 40px; text-align:center; color:#888; font-size:12px; line-height:1.7; }
+      .footer-brand { color:#B49A3A; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; font-family:Georgia,serif; }
+      .footer a { color:#B49A3A; text-decoration:none; }
+
+      @media only screen and (max-width:620px) {
+        .hero { padding:30px 22px 24px 22px; }
+        .iconstrip { padding:0 22px 28px 22px; }
+        .body { padding:28px 22px 26px 22px; }
+        .footer { padding:24px 22px; }
+        .hero-title { font-size:26px; }
+        .gratis { padding:16px 22px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;height:0;width:0">
+      Gratis: la jurisprudencia tributaria en el teléfono y en la computadora. La app de La Corte Dice Tributaria, para {{plataformas}}. Sin prueba limitada y sin tarjeta.
+    </div>
+
+    <div class="wrap">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td align="center">
+            <div class="card">
+
+              <!-- HERO -->
+              <div class="hero">
+                <img src="{{assets_url}}/logo-claro.png" width="140" height="60" alt="La Corte Dice Tributaria" style="display:block;width:140px;height:60px;margin:0 auto;border:0;" />
+                <p class="kicker">Gratis · En el teléfono y en la computadora</p>
+                <h1 class="hero-title">
+                  Tu jurisprudencia,<br /><span class="hero-gold">en el bolsillo y en el escritorio.</span>
+                </h1>
+                <p class="hero-sub">
+                  Lanzamos la aplicación de La Corte Dice Tributaria para {{plataformas}}.
+                  La misma base de fallos, en el aparato que tengas a mano.
+                </p>
+              </div>
+
+              <div class="gratis">
+                <span class="gratis-t">Gratis. Sin prueba limitada, sin tarjeta, sin suscripción.</span>
+                <span class="gratis-s">
+                  Descargar la app y consultar el repositorio completo no cuesta nada.
+                  Dentro de la aplicación no hay nada que comprar.
+                </span>
+              </div>
+
+              <div class="iconstrip">
+                <img src="{{assets_url}}/app-icono.png" width="96" height="96" alt="Ícono de la app La Corte Dice Tributaria" class="appicon" />
+                <p class="appicon-cap">Descarga gratuita</p>
+              </div>
+
+              <!-- CUERPO -->
+              <div class="body">
+                <p class="lead">Estimado/a <strong>{{nombre}}</strong>,</p>
+                <p class="lead">
+                  Durante meses nos pidieron lo mismo: poder consultar un fallo en la
+                  audiencia, en el taxi, en la fila del banco. Hoy ya se puede — y también
+                  en el escritorio, donde de verdad se leen las sentencias. La app de
+                  <strong>La Corte Dice Tributaria</strong> se instala en {{plataformas}}.
+                  Es gratis y se baja en un minuto:
+                </p>
+
+                <!-- BOTONES DE TIENDA
+                     Dos fijos (App Store cubre iPhone, iPad y Mac; Google Play
+                     cubre Android) y uno condicional (Microsoft Store).
+
+                     Las INSIGNIAS son las oficiales de cada tienda, sólo
+                     escaladas, que es lo que exigen sus condiciones de uso.
+                     Van a 2x en el archivo y a la mitad en el marcado, para
+                     que se vean nítidas en pantallas retina. No sustituirlas
+                     por versiones dibujadas ni recortadas. -->
+                <div class="storeblock">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td class="tiendacell store-ios">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                          <tr>
+                            <td style="padding-right:16px;vertical-align:middle">
+                              <a href="{{url_ios}}"><img src="{{assets_url}}/insignia-appstore.png" width="119" height="40" alt="Descárgalo en el App Store" style="display:block;border:0;width:119px;height:40px" /></a>
+                            </td>
+                            <td style="vertical-align:middle;text-align:left">
+                              <a href="{{url_ios}}" style="text-decoration:none">
+                                <span class="store-kick" style="color:#8a7530">Gratis · iPhone, iPad y Mac</span>
+                                <span class="store-name" style="color:#ffffff">Descargar en el App Store</span>
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr><td style="height:10px;line-height:10px;font-size:0">&nbsp;</td></tr>
+                    <tr>
+                      <td class="tiendacell store-and">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                          <tr>
+                            <td style="padding-right:16px;vertical-align:middle">
+                              <a href="{{url_android}}"><img src="{{assets_url}}/insignia-googleplay.png" width="103" height="40" alt="Descargar en Google Play" style="display:block;border:0;width:103px;height:40px" /></a>
+                            </td>
+                            <td style="vertical-align:middle;text-align:left">
+                              <a href="{{url_android}}" style="text-decoration:none">
+                                <span class="store-kick" style="color:#8a7530">Gratis · Para Android</span>
+                                <span class="store-name" style="color:#0A0A0A">Descargar en Google Play</span>
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    {{bloque_windows}}
+                  </table>
+                </div>
+
+                <div class="macnote">
+                  {{nota_escritorio}}
+                </div>
+
+                <p class="small-note">
+                  Si abres este correo desde el celular, el enlace te lleva directo a la tienda que te toca.
+                </p>
+
+                <p class="lead" style="margin-top:30px">
+                  Y trae tres cosas que el navegador no podía darte.
+                </p>
+
+
+                <div class="feature-row">
+                  <p class="feature-title">01 · Jurisprudencia sin conexión</p>
+                  <p class="feature-text">
+                    Los fallos que descargas quedan <strong>guardados en el aparato</strong>.
+                    Se leen completos aunque te quedes sin datos o sin señal, que es
+                    justo cuando más los necesitas.
+                  </p>
+                </div>
+
+                <div class="feature-row">
+                  <p class="feature-title">02 · Avisos de fallos nuevos</p>
+                  <p class="feature-text">
+                    La app te avisa cuando <strong>la Corte resuelve algo</strong> sobre los
+                    temas que sigues. Deja de depender de que alguien te reenvíe la noticia
+                    tres días después.
+                  </p>
+                </div>
+
+                <div class="feature-row">
+                  <p class="feature-title">03 · Falla Tú, el reto diario</p>
+                  <p class="feature-text">
+                    Antes de leer el fallo real, <strong>resuelves tú la casación</strong> —
+                    Casó, Casó Parcialmente o No Casó — y justificas tu decisión. Recién
+                    entonces ves lo que resolvió la Corte Nacional de Justicia.
+                  </p>
+                </div>
+
+
+                <!-- ACCESO (varía según el destinatario) -->
+                <div class="access">
+                  {{bloque_acceso}}
+                </div>
+              </div>
+
+              <!-- PIE -->
+              <div class="footer">
+                <span class="footer-brand">La Corte Dice Tributaria</span>
+                <div>Fundación académica · Ecuador</div>
+                <div style="margin-top:10px">
+                  <a href="https://lacortedicetributaria.com">lacortedicetributaria.com</a> ·
+                  <a href="mailto:info@lacortedicetributaria.com">info@lacortedicetributaria.com</a>
+                </div>
+                <div style="margin-top:16px; font-size:11px; color:#555">
+                  Recibes este correo porque formas parte de la comunidad de La Corte Dice Tributaria.<br />
+                  ¿Prefieres no recibir estos avisos?
+                  <a href="{{url_baja}}" style="color:#555;text-decoration:underline">Date de baja aquí</a>.
+                  No afecta a tu cuenta ni a los correos de acceso.
+                </div>
+              </div>
+
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

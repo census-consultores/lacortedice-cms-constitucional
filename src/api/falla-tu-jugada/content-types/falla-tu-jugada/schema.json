@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "falla_tu_jugadas",
+  "info": {
+    "singularName": "falla-tu-jugada",
+    "pluralName": "falla-tu-jugadas",
+    "displayName": "Falla Tú · Jugada",
+    "description": "Registro persistente de cada jugada de Falla Tú. Habilita ranking global entre usuarios y analítica del juego."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "caseDocumentId": {
+      "type": "string",
+      "required": true
+    },
+    "decision": {
+      "type": "enumeration",
+      "enum": ["C", "CP", "NC"],
+      "required": true
+    },
+    "confidence": {
+      "type": "integer",
+      "min": 1,
+      "max": 3,
+      "required": true
+    },
+    "correct": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "brierScore": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "playedAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "dayKey": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abogados",
+  "info": {
+    "singularName": "abogado",
+    "pluralName": "abogados",
+    "displayName": "Abogado",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "matricula": {
+      "type": "string",
+      "unique": true
+    },
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "nombre_estudio_juridico": {
+      "type": "string"
+    },
+    "tipo_representacion": {
+      "type": "enumeration",
+      "enum": [
+        "Libre ejercicio",
+        "Firma legal"
+      ]
+    },
+    "informacion_adicional": {
+      "type": "component",
+      "component": "shared.informacion-basica",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "version": "1.1.0",
+  "keywords": [],
+  "type": "commonjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "types": "./dist/admin/src/index.d.ts",
+      "source": "./admin/src/index.ts",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    },
+    "./strapi-server": {
+      "types": "./dist/server/src/index.d.ts",
+      "source": "./server/src/index.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "strapi-plugin build",
+    "watch": "strapi-plugin watch",
+    "verify": "strapi-plugin verify",
+    "test:ts:front": "run -T tsc -p admin/tsconfig.json",
+    "test:ts:back": "run -T tsc -p server/tsconfig.json"
+  },
+  "dependencies": {
+    "@apple/app-store-server-library": "^3.1.0",
+    "@strapi/design-system": "^2.0.0-rc.21",
+    "@strapi/icons": "^2.0.0-rc.21",
+    "bcryptjs": "^2.4.3",
+    "juice": "^11.0.0",
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "@strapi/sdk-plugin": "^5.3.2",
+    "@strapi/typescript-utils": "^5.12.4",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/nodemailer": "^6.4.17"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^5.31.0",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "typescript": "^5"
+  },
+  "strapi": {
+    "kind": "plugin",
+    "name": "admin-panel",
+    "displayName": "Panel de Usuarios",
+    "description": "Panel de administración de usuarios, estadísticas y monitoreo de conexiones"
+  },
+  "name": "admin-panel",
+  "description": "Panel de administración de usuarios, estadísticas y monitoreo de conexiones",
+  "license": "MIT"
+}

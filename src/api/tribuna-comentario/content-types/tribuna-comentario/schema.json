@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tribuna_comentarios",
+  "info": {
+    "singularName": "tribuna-comentario",
+    "pluralName": "tribuna-comentarios",
+    "displayName": "Tribuna · Comentario",
+    "description": "Un comentario dentro de un tema de la Tribuna Tributaria."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "tema": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tribuna-tema.tribuna-tema"
+    },
+    "cuerpo": {
+      "type": "text",
+      "required": true,
+      "maxLength": 5000
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": ["visible", "oculto"],
+      "default": "visible",
+      "required": true
+    }
+  }
+}

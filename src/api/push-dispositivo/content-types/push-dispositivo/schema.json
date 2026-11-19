@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "push_dispositivos",
+  "info": {
+    "singularName": "push-dispositivo",
+    "pluralName": "push-dispositivos",
+    "displayName": "Push · Dispositivo",
+    "description": "Tokens APNs/FCM registrados por la app para notificaciones push. Un registro por dispositivo; se desactiva (activo=false) al cerrar sesión o cuando APNs devuelve 410 Unregistered."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "token": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "plataforma": {
+      "type": "enumeration",
+      "enum": ["ios", "android"],
+      "default": "ios"
+    },
+    "activo": {
+      "type": "boolean",
+      "default": true
+    },
+    "ultimoRegistroEn": {
+      "type": "datetime"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "acerca_des",
+  "info": {
+    "singularName": "acerca-de",
+    "pluralName": "acerca-des",
+    "displayName": "Acerca de"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "about": {
+      "type": "blocks",
+      "required": true
+    },
+    "terminos_y_condiciones": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "politica_privacidad": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

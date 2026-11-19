@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "causales_invocadas",
+  "info": {
+    "singularName": "causal-invocada",
+    "pluralName": "causales-invocadas",
+    "displayName": "Causal invocada",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

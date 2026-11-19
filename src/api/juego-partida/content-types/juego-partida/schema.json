@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "juego_partidas",
+  "info": {
+    "singularName": "juego-partida",
+    "pluralName": "juego-partidas",
+    "displayName": "Juegos · Partida",
+    "description": "Una ronda cerrada de cualquier juego del motor común (Tribunal Express, Gemelos Divergentes, …). Alimenta rankings, rachas y límites diarios."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "juego": {
+      "type": "enumeration",
+      "enum": ["express", "gemelos", "ojo", "causal", "criterio", "voto"],
+      "required": true
+    },
+    "partidaId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "dayKey": {
+      "type": "string",
+      "required": true
+    },
+    "puntaje": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "aciertos": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "total": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "duracionMs": {
+      "type": "integer",
+      "default": 0
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": ["cerrada", "fuera_de_tiempo"],
+      "default": "cerrada",
+      "required": true
+    },
+    "ronda": {
+      "type": "json"
+    },
+    "respuestas": {
+      "type": "json"
+    },
+    "playedAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "retoId": {
+      "type": "string"
+    },
+    "origen": {
+      "type": "enumeration",
+      "enum": ["online", "offline"],
+      "default": "online",
+      "required": true
+    }
+  }
+}

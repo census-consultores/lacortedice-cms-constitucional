@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tribuna_denuncias",
+  "info": {
+    "singularName": "tribuna-denuncia",
+    "pluralName": "tribuna-denuncias",
+    "displayName": "Tribuna · Denuncia",
+    "description": "Denuncia de un usuario sobre un tema o comentario de la Tribuna. Los admins la resuelven ocultando el contenido o descartándola."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "tipo": {
+      "type": "enumeration",
+      "enum": ["tema", "comentario"],
+      "required": true
+    },
+    "objetivoDocumentId": {
+      "type": "string",
+      "required": true,
+      "maxLength": 64
+    },
+    "motivo": {
+      "type": "string",
+      "maxLength": 300
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": ["pendiente", "resuelta"],
+      "default": "pendiente",
+      "required": true
+    }
+  }
+}

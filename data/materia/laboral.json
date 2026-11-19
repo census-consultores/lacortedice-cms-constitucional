@@ -1,0 +1,424 @@
+{
+  "materia": "Laboral",
+  "palabra_catalogo": "LABORAL",
+  "decisiones_finales": [
+    {
+      "nombre": "Con lugar",
+      "sigla": "CL"
+    },
+    {
+      "nombre": "Sin lugar",
+      "sigla": "SL"
+    },
+    {
+      "nombre": "Parcialmente con lugar",
+      "sigla": "PCL"
+    }
+  ],
+  "decisiones_finales_casacion": [
+    {
+      "nombre": "Casa la sentencia.",
+      "sigla": "C"
+    },
+    {
+      "nombre": "No casa la sentencia.",
+      "sigla": "NC"
+    },
+    {
+      "nombre": "Casa parcialmente la sentencia.",
+      "sigla": "CP"
+    }
+  ],
+  "decisiones_finales_apelacion": [
+    {
+      "nombre": "Confirma la sentencia.",
+      "sigla": "CONF"
+    },
+    {
+      "nombre": "Revoca la sentencia.",
+      "sigla": "REV"
+    },
+    {
+      "nombre": "Reforma la sentencia.",
+      "sigla": "REF"
+    },
+    {
+      "nombre": "Declara la nulidad.",
+      "sigla": "NUL"
+    }
+  ],
+  "tipos_de_accion": [
+    "Procedimiento sumario",
+    "Procedimiento ordinario",
+    "Procedimiento ejecutivo",
+    "Procedimiento monitorio",
+    "Procedimiento de ejecución"
+  ],
+  "estados_del_juicio": [
+    "En Unidad Judicial",
+    "En Corte Provincial",
+    "En Corte Nacional",
+    "Archivado",
+    "Sin resultados",
+    "No laboral"
+  ],
+  "categorias": [
+    {
+      "nombre": "Principios del derecho del trabajo",
+      "subcategorias": [
+        "Irrenunciabilidad de derechos",
+        "In dubio pro operario (aplicación favorable al trabajador)",
+        "Primacía de la realidad",
+        "Intangibilidad de derechos",
+        "Igualdad y no discriminación",
+        "Estabilidad laboral",
+        "Continuidad de la relación laboral",
+        "Libertad de trabajo y contratación",
+        "Tutela judicial efectiva y debido proceso laboral",
+        "Seguridad jurídica"
+      ]
+    },
+    {
+      "nombre": "Relación laboral",
+      "subcategorias": [
+        "Existencia de la relación laboral",
+        "Dependencia o subordinación",
+        "Prestación personal del servicio",
+        "Remuneración como elemento del contrato",
+        "Negación de la relación laboral (contrato civil o de servicios)",
+        "Calidad de trabajador",
+        "Calidad de empleador",
+        "Representantes del empleador",
+        "Sustitución o cambio de empleador",
+        "Grupo empresarial y unidad económica",
+        "Tercerización e intermediación laboral",
+        "Actividades complementarias",
+        "Trabajo autónomo y prestación de servicios sin dependencia"
+      ]
+    },
+    {
+      "nombre": "Contratos de trabajo",
+      "subcategorias": [
+        "Contrato indefinido",
+        "Período de prueba",
+        "Contrato eventual",
+        "Contrato ocasional",
+        "Contrato de temporada",
+        "Contrato por obra cierta",
+        "Contrato por obra o servicio determinado dentro del giro del negocio",
+        "Contrato de jornada parcial",
+        "Contrato a plazo fijo",
+        "Contrato de aprendizaje",
+        "Contrato de trabajo de adolescentes",
+        "Contrato de trabajo remunerado del hogar",
+        "Contratos especiales por sector o actividad",
+        "Contrato verbal",
+        "Contrato escrito y registro del contrato",
+        "Teletrabajo y trabajo a domicilio"
+      ]
+    },
+    {
+      "nombre": "Remuneración",
+      "subcategorias": [
+        "Salario básico unificado",
+        "Remuneraciones impagas",
+        "Remuneración accesoria (comisiones, bonos, propinas)",
+        "Remuneración en especie",
+        "Salario digno y compensación económica",
+        "Descuentos y retenciones de la remuneración",
+        "Retención indebida y triple recargo",
+        "Intereses sobre haberes laborales",
+        "Igualdad de remuneración",
+        "Remuneración variable y a destajo"
+      ]
+    },
+    {
+      "nombre": "Jornada de trabajo y descansos",
+      "subcategorias": [
+        "Jornada ordinaria máxima",
+        "Horas suplementarias",
+        "Horas extraordinarias",
+        "Jornada nocturna",
+        "Trabajo en días de descanso obligatorio y feriados",
+        "Jornadas especiales y turnos",
+        "Prueba de la jornada y de las horas extras",
+        "Vacaciones anuales",
+        "Licencias y permisos",
+        "Licencia por maternidad y paternidad"
+      ]
+    },
+    {
+      "nombre": "Beneficios sociales",
+      "subcategorias": [
+        "Décima tercera remuneración",
+        "Décima cuarta remuneración",
+        "Fondos de reserva",
+        "Vacaciones no gozadas",
+        "Compensación por salario digno",
+        "Bonificaciones del contrato colectivo",
+        "Alimentación, transporte y otros beneficios",
+        "Prescripción de beneficios sociales"
+      ]
+    },
+    {
+      "nombre": "Participación de utilidades",
+      "subcategorias": [
+        "Derecho a utilidades",
+        "Cálculo y base de las utilidades",
+        "Cargas familiares",
+        "Utilidades de trabajadores de intermediarias y complementarias",
+        "Unidad económica para el reparto de utilidades",
+        "Utilidades no pagadas o pagadas en exceso"
+      ]
+    },
+    {
+      "nombre": "Terminación del contrato de trabajo",
+      "subcategorias": [
+        "Causas legales de terminación",
+        "Terminación por mutuo acuerdo",
+        "Renuncia voluntaria",
+        "Renuncia forzada o viciada",
+        "Desahucio",
+        "Bonificación por desahucio",
+        "Conclusión de la obra o vencimiento del plazo",
+        "Muerte o incapacidad del trabajador",
+        "Caso fortuito o fuerza mayor",
+        "Liquidación o cierre de la empresa",
+        "Terminación durante el período de prueba"
+      ]
+    },
+    {
+      "nombre": "Despido intempestivo",
+      "subcategorias": [
+        "Configuración del despido intempestivo",
+        "Prueba del despido",
+        "Indemnización por despido intempestivo",
+        "Indemnizaciones adicionales por contrato colectivo",
+        "Despido de trabajadores con discapacidad o sustitutos",
+        "Despido de trabajadores con contrato eventual, ocasional o a plazo",
+        "Despido encubierto o indirecto",
+        "Despido durante enfermedad o incapacidad",
+        "Despido y bonificación por desahucio acumulada"
+      ]
+    },
+    {
+      "nombre": "Despido ineficaz",
+      "subcategorias": [
+        "Despido ineficaz de mujer embarazada o en período de lactancia",
+        "Despido ineficaz de dirigentes sindicales",
+        "Despido por discriminación",
+        "Reintegro al puesto de trabajo",
+        "Indemnización sustitutiva del reintegro",
+        "Plazo y procedimiento del despido ineficaz",
+        "Remuneraciones dejadas de percibir"
+      ]
+    },
+    {
+      "nombre": "Visto bueno",
+      "subcategorias": [
+        "Causales de visto bueno solicitado por el empleador",
+        "Causales de visto bueno solicitado por el trabajador",
+        "Procedimiento ante el inspector del trabajo",
+        "Impugnación judicial de la resolución de visto bueno",
+        "Abandono del trabajo",
+        "Faltas repetidas de puntualidad o asistencia",
+        "Indisciplina, desobediencia e injurias",
+        "Falta de probidad y conducta inmoral",
+        "Acoso laboral como causal de visto bueno",
+        "Suspensión provisional de la relación laboral",
+        "Visto bueno y pago de indemnizaciones"
+      ]
+    },
+    {
+      "nombre": "Acta de finiquito y liquidación de haberes",
+      "subcategorias": [
+        "Validez y requisitos del acta de finiquito",
+        "Impugnación del acta de finiquito",
+        "Registro ante el Ministerio del Trabajo",
+        "Efecto liberatorio del acta de finiquito",
+        "Liquidación de haberes",
+        "Pago parcial y saldos pendientes",
+        "Liquidación pericial"
+      ]
+    },
+    {
+      "nombre": "Jubilación patronal",
+      "subcategorias": [
+        "Derecho a la jubilación patronal",
+        "Jubilación patronal proporcional",
+        "Cálculo de la pensión jubilar",
+        "Pensión mínima y máxima",
+        "Fondo global de jubilación",
+        "Décima tercera y décima cuarta sobre la pensión jubilar",
+        "Jubilación patronal y despido intempestivo",
+        "Reajuste de pensiones jubilares",
+        "Jubilación patronal en el sector público",
+        "Imprescriptibilidad de la jubilación patronal"
+      ]
+    },
+    {
+      "nombre": "Riesgos del trabajo",
+      "subcategorias": [
+        "Accidente de trabajo",
+        "Enfermedad profesional u ocupacional",
+        "Indemnizaciones a cargo del empleador",
+        "Responsabilidad del empleador por falta de afiliación al IESS",
+        "Responsabilidad solidaria con el IESS",
+        "Incapacidad temporal",
+        "Incapacidad permanente parcial, total o absoluta",
+        "Muerte del trabajador",
+        "Prestaciones del IESS por riesgos del trabajo",
+        "Seguridad y salud en el trabajo",
+        "Reubicación y reinserción laboral"
+      ]
+    },
+    {
+      "nombre": "Seguridad social",
+      "subcategorias": [
+        "Afiliación al IESS",
+        "Falta de afiliación y aportes no pagados",
+        "Responsabilidad patronal",
+        "Mora patronal",
+        "Prestaciones del IESS",
+        "Fondos de reserva depositados en el IESS"
+      ]
+    },
+    {
+      "nombre": "Acoso laboral, discriminación y violencia en el trabajo",
+      "subcategorias": [
+        "Acoso laboral",
+        "Acoso sexual en el trabajo",
+        "Discriminación en el empleo",
+        "Discriminación por embarazo o maternidad",
+        "Discriminación por discapacidad",
+        "Discriminación por edad",
+        "Inclusión laboral de personas con discapacidad",
+        "Daño moral en la relación laboral"
+      ]
+    },
+    {
+      "nombre": "Derecho colectivo del trabajo",
+      "subcategorias": [
+        "Contrato colectivo",
+        "Organizaciones de trabajadores y sindicatos",
+        "Garantías sindicales y fuero sindical",
+        "Huelga",
+        "Paro patronal",
+        "Conflictos colectivos",
+        "Tribunales de conciliación y arbitraje",
+        "Negociación colectiva en el sector público"
+      ]
+    },
+    {
+      "nombre": "Sector público y competencia",
+      "subcategorias": [
+        "Trabajadores públicos sujetos al Código del Trabajo",
+        "Servidores públicos sujetos a la LOSEP",
+        "Competencia: juez del trabajo vs. contencioso administrativo",
+        "Contratos de servicios ocasionales",
+        "Supresión de puestos",
+        "Compra de renuncias y renuncia obligatoria",
+        "Empresas públicas como empleadoras",
+        "Gobiernos autónomos descentralizados como empleadores",
+        "Procuraduría General del Estado en juicios laborales"
+      ]
+    },
+    {
+      "nombre": "Solidaridad y responsabilidad patronal",
+      "subcategorias": [
+        "Solidaridad del representante legal del empleador",
+        "Solidaridad entre varios empleadores",
+        "Solidaridad en tercerización e intermediación",
+        "Solidaridad del beneficiario del servicio",
+        "Levantamiento del velo societario en materia laboral",
+        "Sucesión de empresa y transferencia del negocio",
+        "Responsabilidad de accionistas y administradores"
+      ]
+    },
+    {
+      "nombre": "Prescripción",
+      "subcategorias": [
+        "Prescripción general de tres años",
+        "Prescripciones especiales de un mes",
+        "Interrupción de la prescripción",
+        "Cómputo de la prescripción",
+        "Imprescriptibilidad de ciertos derechos laborales",
+        "Prescripción de la acción de riesgos del trabajo"
+      ]
+    },
+    {
+      "nombre": "Prueba en materia laboral",
+      "subcategorias": [
+        "Carga de la prueba",
+        "Inversión de la carga de la prueba",
+        "Presunciones a favor del trabajador",
+        "Juramento deferido",
+        "Declaración de parte",
+        "Prueba testimonial",
+        "Prueba documental",
+        "Exhibición de documentos",
+        "Prueba pericial contable",
+        "Prueba pericial técnica",
+        "Inspección judicial",
+        "Prueba nueva y prueba no anunciada",
+        "Valoración de la prueba y sana crítica",
+        "Prueba electrónica (correos, mensajería, biométricos)"
+      ]
+    },
+    {
+      "nombre": "Procedimiento laboral",
+      "subcategorias": [
+        "Procedimiento sumario",
+        "Competencia del juez de trabajo",
+        "Legitimación activa y pasiva",
+        "Citación y comparecencia",
+        "Rebeldía y falta de contestación",
+        "Audiencia única",
+        "Nulidad procesal",
+        "Abandono del proceso",
+        "Desistimiento",
+        "Conciliación",
+        "Transacción",
+        "Cosa juzgada",
+        "Litispendencia",
+        "Acumulación de pretensiones y de procesos",
+        "Medidas cautelares",
+        "Ejecución de la sentencia",
+        "Costas y honorarios",
+        "Recurso de apelación",
+        "Recurso de casación",
+        "Motivación de la sentencia",
+        "Congruencia de la sentencia"
+      ]
+    },
+    {
+      "nombre": "Regímenes especiales de trabajo",
+      "subcategorias": [
+        "Trabajo de adolescentes",
+        "Trabajo remunerado del hogar",
+        "Trabajadores con discapacidad",
+        "Trabajadores extranjeros y migrantes",
+        "Trabajo agrícola",
+        "Trabajo en el sector de la construcción",
+        "Trabajadores de la salud y de la educación privada",
+        "Deportistas, artistas y profesionales",
+        "Trabajadores del mar y transporte",
+        "Pasantías y prácticas preprofesionales"
+      ]
+    },
+    {
+      "nombre": "Reglamento interno y régimen disciplinario",
+      "subcategorias": [
+        "Reglamento interno de trabajo",
+        "Sanciones disciplinarias",
+        "Multas al trabajador",
+        "Suspensión del trabajador",
+        "Cambio de ocupación y traslado",
+        "Reducción de remuneración o de jornada",
+        "Obligaciones y prohibiciones del empleador",
+        "Obligaciones y prohibiciones del trabajador"
+      ]
+    }
+  ],
+  "tribunales": []
+}

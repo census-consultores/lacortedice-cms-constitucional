@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estado_del_juicios",
+  "info": {
+    "singularName": "estado-del-juicio",
+    "pluralName": "estado-del-juicios",
+    "displayName": "Estado del juicio"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    }
+  }
+}

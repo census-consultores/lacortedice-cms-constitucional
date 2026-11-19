@@ -1,0 +1,200 @@
+{
+  "kind": "collectionType",
+  "collectionName": "causas",
+  "info": {
+    "singularName": "causa",
+    "pluralName": "causas",
+    "displayName": "Instancia",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "juicio": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "estado_del_juicio": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::estado-del-juicio.estado-del-juicio"
+    },
+    "instancia": {
+      "type": "string",
+      "default": "Tribunal de lo Contencioso Tributario"
+    },
+    "causa_tribunal": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tribunal.tribunal"
+    },
+    "fecha_de_emision": {
+      "type": "date",
+      "required": false
+    },
+    "abogado_actor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::abogado.abogado"
+    },
+    "entidad_demandada": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::entidad.entidad"
+    },
+    "abogado_demandado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::abogado.abogado"
+    },
+    "resumen_del_caso": {
+      "type": "text",
+      "required": false
+    },
+    "cuantia": {
+      "type": "decimal",
+      "column": {
+        "defaultTo": 0,
+        "type": "decimal",
+        "args": [
+          11,
+          2
+        ]
+      }
+    },
+    "detalle_de_cuantia": {
+      "type": "text"
+    },
+    "objeto_de_controversia": {
+      "type": "text",
+      "required": false
+    },
+    "pretensiones": {
+      "type": "text",
+      "required": false
+    },
+    "excepciones": {
+      "type": "text"
+    },
+    "antecedentes": {
+      "type": "text",
+      "required": false
+    },
+    "pruebas_del_actor": {
+      "type": "text",
+      "required": false
+    },
+    "pruebas_del_demandado": {
+      "type": "text",
+      "required": false
+    },
+    "argumentos_del_actor": {
+      "type": "text",
+      "required": false
+    },
+    "argumentos_del_demandado": {
+      "type": "text",
+      "required": false
+    },
+    "decision_final": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::decision-final.decision-final"
+    },
+    "medidas_adicionales": {
+      "type": "text"
+    },
+    "argumento_juez_salvado": {
+      "type": "text"
+    },
+    "jurisprudencia_mencionada": {
+      "type": "text",
+      "required": false
+    },
+    "criterio_sala_para_resolver": {
+      "type": "text",
+      "required": false
+    },
+    "categorias": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categoria.categoria",
+      "inversedBy": "causas"
+    },
+    "observaciones": {
+      "type": "text"
+    },
+    "causa_jueces": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::juez.juez",
+      "inversedBy": "causas"
+    },
+    "actor": {
+      "type": "string",
+      "required": false
+    },
+    "tipo_actor": {
+      "type": "enumeration",
+      "enum": [
+        "empresa",
+        "persona_natural",
+        "desconocido"
+      ],
+      "required": false
+    },
+    "actor_normalizado": {
+      "type": "string",
+      "required": false
+    },
+    "voto_salvado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::juez.juez"
+    },
+    "juez": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::juez.juez"
+    },
+    "tipo_de_accion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tipo-de-accion.tipo-de-accion"
+    },
+    "file_pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "casacion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::casacion.casacion",
+      "mappedBy": "causa"
+    },
+    "fecha_inicio_caso": {
+      "type": "date",
+      "required": false
+    },
+    "fecha_sentencia_caso": {
+      "type": "date",
+      "required": false
+    },
+    "duracion_dias": {
+      "type": "integer",
+      "required": false
+    },
+    "apelacion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::apelacion.apelacion",
+      "mappedBy": "causa"
+    }
+  }
+}

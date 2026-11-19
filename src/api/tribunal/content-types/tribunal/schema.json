@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tribunales",
+  "info": {
+    "singularName": "tribunal",
+    "pluralName": "tribunales",
+    "displayName": "Tribunal",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "tribunal_jueces": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::juez.juez",
+      "mappedBy": "juez_tribunales"
+    }
+  }
+}

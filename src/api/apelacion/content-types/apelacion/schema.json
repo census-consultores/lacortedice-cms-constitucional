@@ -1,0 +1,113 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apelaciones",
+  "info": {
+    "singularName": "apelacion",
+    "pluralName": "apelaciones",
+    "displayName": "Apelación",
+    "description": "Sentencia de segunda instancia (Sala de la Corte Provincial)"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "causa": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::causa.causa",
+      "inversedBy": "apelacion"
+    },
+    "instancia": {
+      "type": "string",
+      "default": "Corte Provincial de Justicia"
+    },
+    "fecha_de_emision": {
+      "type": "date",
+      "required": false
+    },
+    "antecedentes": {
+      "type": "text",
+      "required": false
+    },
+    "recurrentes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recurrente.recurrente"
+    },
+    "causal_invocadas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::causal-invocada.causal-invocada"
+    },
+    "argumentos_del_recurrente": {
+      "type": "text",
+      "required": false
+    },
+    "argumentos_contraparte": {
+      "type": "text"
+    },
+    "decision_final": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::decision-final-apelacion.decision-final-apelacion"
+    },
+    "medidas_adicionales": {
+      "type": "text"
+    },
+    "voto_salvado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::juez.juez"
+    },
+    "argumento_juez_salvado": {
+      "type": "text"
+    },
+    "jurisprudencia_mencionada": {
+      "type": "text"
+    },
+    "criterio_sala_para_resolver": {
+      "type": "text",
+      "required": false
+    },
+    "observaciones": {
+      "type": "text"
+    },
+    "juez": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::juez.juez"
+    },
+    "jueces": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::juez.juez",
+      "inversedBy": "apelaciones"
+    },
+    "file_pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "fecha_inicio_apel": {
+      "type": "date",
+      "required": false
+    },
+    "fecha_sentencia_apel": {
+      "type": "date",
+      "required": false
+    },
+    "duracion_dias_apel": {
+      "type": "integer",
+      "required": false
+    },
+    "categorias": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categoria.categoria"
+    }
+  }
+}
